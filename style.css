@@ -1,0 +1,74 @@
+/* =========================================
+    GLOBAL & UTILITY STYLES (From Source 12f)
+    ========================================= */
+:root {
+    --primary: #2563eb;
+    /* blue-600 */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Text Balance Utility */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Underline Hover Animation */
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.2s ease-in-out;
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Smart Nav Hidden State */
+.nav-hidden {
+    transform: translateY(-100%);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+    SECTION 9: FAQ ANIMATIONS
+    ========================================= */
+details>summary {
+    list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.chevron-icon {
+    transition: transform 0.2s ease-in-out;
+}

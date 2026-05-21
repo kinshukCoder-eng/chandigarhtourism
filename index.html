@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<!-- this is comment -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandigarh - The City Beautiful</title>
+    <link rel="icon" type="image/x-icon" href="download.jpg">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="./script.js"></script>
+</head>
+
+<body class="font-sans antialiased bg-gray-50 text-gray-900">
+
+    <div class="fixed top-0 left-0 w-full h-1.5 bg-gray-200 z-[60]">
+        <div id="progress-bar" class="h-full bg-blue-600 w-0 transition-all duration-75 ease-out"></div>
+    </div>
+
+    <header id="main-header"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+
+                <a href="#" class="flex items-center gap-2 group">
+                    <div
+                        class="text-2xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:scale-105 transition-transform">
+                        Chandigarh Tourism
+                    </div>
+                    <div class="hidden sm:block text-sm text-gray-500 font-medium"></div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about"
+                        class="relative text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors hover-underline">About</a>
+                    <a href="#attractions"
+                        class="relative text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors hover-underline">Attractions</a>
+                    <a href="#food-culture"
+                        class="relative text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors hover-underline">Food
+                        & Culture</a>
+                    <a href="#tours"
+                        class="relative text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors hover-underline">Tours</a>
+                    <a href="#travel-info"
+                        class="relative text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors hover-underline">Travel
+                        Info</a>
+                    <a href="#contact"
+                        class="relative text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors hover-underline">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <button
+                        class="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200">
+                        Book a Tour
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-900"
+                    aria-label="Toggle menu">
+                    <i data-lucide="menu" id="icon-menu" class="h-6 w-6"></i>
+                    <i data-lucide="x" id="icon-close" class="h-6 w-6 hidden"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 pt-4">
+                <div class="flex flex-col gap-4">
+                    <a href="#about"
+                        class="mobile-link text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors px-2 py-1 hover:bg-gray-50 rounded-md">About</a>
+                    <a href="#attractions"
+                        class="mobile-link text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors px-2 py-1 hover:bg-gray-50 rounded-md">Attractions</a>
+                    <a href="#food-culture"
+                        class="mobile-link text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors px-2 py-1 hover:bg-gray-50 rounded-md">Food
+                        & Culture</a>
+                    <a href="#tours"
+                        class="mobile-link text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors px-2 py-1 hover:bg-gray-50 rounded-md">Tours</a>
+                    <a href="#travel-info"
+                        class="mobile-link text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors px-2 py-1 hover:bg-gray-50 rounded-md">Travel
+                        Info</a>
+                    <a href="#contact"
+                        class="mobile-link text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors px-2 py-1 hover:bg-gray-50 rounded-md">Contact</a>
+
+                    <button
+                        class="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium shadow-md w-full">
+                        Book a Tour
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="relative pt-20 pb-8 md:pt-24 md:pb-12 overflow-hidden flex items-center">
+
+        <div id="hero-bg" class="absolute inset-0 z-0 overflow-hidden">
+            <img src="https://miro.medium.com/v2/1*6cwYQsFdn3HaKUgZZbVpZw.jpeg" alt="Chandigarh Rock Garden"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.1),transparent_50%)]">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+
+                <div
+                    class="inline-block mb-6 px-5 py-2.5 bg-blue-50/80 backdrop-blur-sm rounded-full border border-blue-100">
+                    <span class="text-sm font-semibold text-blue-600 tracking-wide">Experience The City Beautiful</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight text-gray-900 text-balance">
+                    Discover
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                        Chandigarh's
+                    </span>
+                    Hidden Gems
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-500 mb-8 leading-relaxed max-w-2xl">
+                    Explore India's first planned city, designed by Le Corbusier in 1952. From UNESCO-listed
+                    architectural masterpieces to serene gardens and vibrant markets, experience the perfect blend of
+                    modernism and nature.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="group bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-md text-lg font-medium shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                        Explore Tours
+                        <i data-lucide="arrow-right"
+                            class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+
+                    <button
+                        class="group bg-transparent border-2 border-gray-300 text-gray-700 hover:border-blue-600 hover:text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-md text-lg font-medium hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                        <i data-lucide="play"
+                            class="mr-2 h-5 w-5 group-hover:scale-110 transition-transform fill-current"></i>
+                        Watch Video
+                    </button>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-200 grid grid-cols-3 gap-6">
+                    <div>
+                        <div class="text-3xl font-bold text-blue-600 mb-1">500+</div>
+                        <div class="text-sm text-gray-500">Happy Visitors</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-blue-600 mb-1">4.9</div>
+                        <div class="text-sm text-gray-500">Average Rating</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-blue-600 mb-1">15+</div>
+                        <div class="text-sm text-gray-500">Tour Options</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-10 md:py-16 bg-gray-50/50">
+        <div class="container mx-auto px-4">
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-10">
+
+                <div>
+                    <div class="text-sm font-medium text-blue-600 mb-4 uppercase tracking-wider">About Chandigarh</div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">India's First
+                        Planned City</h2>
+
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Chandigarh, meaning "The Fort of Chandi" (named after the nearby Chandi Mandir temple), stands
+                        as a
+                        testament to modernist urban planning and architectural excellence. Designed by the legendary
+                        Swiss-French
+                        architect <strong>Le Corbusier</strong> in 1950, commissioned by India's first Prime Minister
+                        Jawaharlal
+                        Nehru, this city was envisioned as a symbol of India's freedom and faith in the future.
+                    </p>
+
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        After India's partition in 1947, Chandigarh was built to serve as the capital for East Punjab
+                        and to
+                        resettle refugees from West Punjab. The foundation stone was laid in 1952, and by 1966, it
+                        became a Union
+                        Territory serving as the capital for both Punjab and Haryana states. Covering 114 sq km at the
+                        foothills
+                        of the Shivalik hills, Chandigarh is home to over 1 million residents with an impressive
+                        literacy rate of
+                        86%.
+                    </p>
+
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Le Corbusier's revolutionary design incorporated his innovative "Modulor" system for human
+                        scale,
+                        multilayered circulation systems, and residential sectors that perfectly blend concrete with
+                        greenery. The
+                        Capitol Complex, featuring the High Court, Legislative Assembly, and Secretariat built with
+                        rough concrete
+                        and geometric forms, earned UNESCO World Heritage status for its architectural significance.
+                    </p>
+
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Known as the <strong>"City Beautiful"</strong>, Chandigarh pioneered the Green City Concept with
+                        well-planned landscaping, extensive tree plantations, open spaces, and green belts. The city's
+                        design
+                        includes well-wooded peripheral forests, the scenic Sukhna Lake, and a protected Wildlife
+                        Sanctuary,
+                        creating a perfect harmony between urban development and nature.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Open_Hand_Monument.JPG"
+                            alt="Open Hand Monument"
+                            class="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/High_Court_Chandigarh.jpg"
+                            alt="High Court"
+                            class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSip8aJHfGxcMjBlHkxNoszt9WBCsaHc3qPnw&s"
+                            alt="Sukhna Lake"
+                            class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeHQg3bXdTn3XcprPWsJfCq2naikUY9hXrFw&s"
+                            alt="Welcome to Chandigarh"
+                            class="w-full h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+
+                <div class="bg-white rounded-xl border border-gray-200 p-6 text-center hover-lift shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <div class="text-3xl font-bold font-serif mb-2 text-gray-900">10,000+</div>
+                    <div class="text-sm text-gray-500">Happy Travelers</div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-6 text-center hover-lift shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="award" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <div class="text-3xl font-bold font-serif mb-2 text-gray-900">15+</div>
+                    <div class="text-sm text-gray-500">Years Experience</div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-6 text-center hover-lift shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="map-pin" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <div class="text-3xl font-bold font-serif mb-2 text-gray-900">30+</div>
+                    <div class="text-sm text-gray-500">Attractions Covered</div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-6 text-center hover-lift shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="star" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <div class="text-3xl font-bold font-serif mb-2 text-gray-900">4.9/5</div>
+                    <div class="text-sm text-gray-500">Average Rating</div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-6 text-center hover-lift shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="building-2" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <div class="text-3xl font-bold font-serif mb-2 text-gray-900">114 km²</div>
+                    <div class="text-sm text-gray-500">City Area</div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-6 text-center hover-lift shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="trees" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <div class="text-3xl font-bold font-serif mb-2 text-gray-900">35%</div>
+                    <div class="text-sm text-gray-500">Green Cover</div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-6 text-center hover-lift shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="bike" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <div class="text-3xl font-bold font-serif mb-2 text-gray-900">15 km</div>
+                    <div class="text-sm text-gray-500">Cycling Tracks</div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-gray-200 p-6 text-center hover-lift shadow-sm">
+                    <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="languages" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <div class="text-3xl font-bold font-serif mb-2 text-gray-900">86%</div>
+                    <div class="text-sm text-gray-500">Literacy Rate</div>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <div class="text-center mb-6">
+                    <div class="text-sm font-medium text-blue-600 mb-4 uppercase tracking-wider">Sustainable Planning
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Green City Excellence</h3>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Chandigarh's pioneering approach to sustainable urban development makes it one of India's
+                        greenest cities.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 hover-lift shadow-sm">
+                        <div class="h-10 w-10 rounded-full bg-green-50 flex items-center justify-center mb-4">
+                            <i data-lucide="trees" class="h-5 w-5 text-green-600"></i>
+                        </div>
+                        <h4 class="font-serif font-bold mb-2 text-gray-900">Sector-Based Planning</h4>
+                        <p class="text-sm text-gray-500">47 self-contained sectors with residential, commercial, and
+                            green spaces in each sector</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 hover-lift shadow-sm">
+                        <div class="h-10 w-10 rounded-full bg-green-50 flex items-center justify-center mb-4">
+                            <i data-lucide="trees" class="h-5 w-5 text-green-600"></i>
+                        </div>
+                        <h4 class="font-serif font-bold mb-2 text-gray-900">Tree-Lined Avenues</h4>
+                        <p class="text-sm text-gray-500">Over 100 km of tree-lined roads with species-specific planting
+                            for each sector</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 hover-lift shadow-sm">
+                        <div class="h-10 w-10 rounded-full bg-green-50 flex items-center justify-center mb-4">
+                            <i data-lucide="trees" class="h-5 w-5 text-green-600"></i>
+                        </div>
+                        <h4 class="font-serif font-bold mb-2 text-gray-900">Protected Forests</h4>
+                        <p class="text-sm text-gray-500">Sukhna Wildlife Sanctuary and peripheral forest cover
+                            protecting local biodiversity</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 hover-lift shadow-sm">
+                        <div class="h-10 w-10 rounded-full bg-green-50 flex items-center justify-center mb-4">
+                            <i data-lucide="trees" class="h-5 w-5 text-green-600"></i>
+                        </div>
+                        <h4 class="font-serif font-bold mb-2 text-gray-900">Sustainable Design</h4>
+                        <p class="text-sm text-gray-500">Climate-responsive architecture with natural ventilation and
+                            sun protection features</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="attractions" class="py-10 md:py-16 bg-gray-50/50">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <div class="text-sm font-medium text-blue-600 mb-4 uppercase tracking-wider">Must-See Destinations</div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 text-balance">Popular
+                    Attractions</h2>
+                <p class="text-lg text-gray-600">
+                    From Le Corbusier's architectural marvels to serene gardens and cultural landmarks, discover what
+                    makes Chandigarh truly special.
+                </p>
+            </div>
+
+            <div id="attractions-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <section id="food-culture" class="py-10 md:py-16">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <div class="text-sm font-medium text-blue-600 mb-4 uppercase tracking-wider">Taste & Traditions</div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6" style="text-wrap: balance;">Food & Culture
+                </h2>
+                <p class="text-lg text-gray-500">
+                    Experience the rich flavors of Punjabi cuisine, vibrant street food culture, traditional festivals,
+                    and the artistic heritage that make Chandigarh unique.
+                </p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6">Culinary Delights
+                </h3>
+
+                <div id="culinary-grid" class="grid md:grid-cols-3 gap-8"></div>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6">Cultural Events &
+                    Festivals</h3>
+
+                <div id="festivals-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6">Shopping, Arts &
+                    Entertainment</h3>
+
+                <div id="entertainment-grid" class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="travel-info" class="py-10 md:py-16 bg-gray-50/50">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <div class="text-sm font-medium text-blue-600 mb-4 uppercase tracking-wider">Plan Your Visit</div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6" style="text-wrap: balance;">Travel
+                    Information</h2>
+                <p class="text-lg text-gray-500">
+                    Everything you need to know to make your Chandigarh visit smooth and memorable.
+                </p>
+            </div>
+
+            <div class="mb-10">
+                <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 text-center shadow-sm hover-lift">
+                        <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="calendar" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold mb-2">Best Time to Visit</h3>
+                        <p class="text-sm text-gray-500">October to March for pleasant weather. Avoid summer months
+                            (May-July) when temperatures exceed 40°C.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 text-center shadow-sm hover-lift">
+                        <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="cloud" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold mb-2">Weather</h3>
+                        <p class="text-sm text-gray-500">Winter: 5-20°C, Summer: 25-45°C, Monsoon: July-September. Pack
+                            layers for winter evenings.</p>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 text-center shadow-sm hover-lift">
+                        <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="info" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-serif font-bold mb-2">Language</h3>
+                        <p class="text-sm text-gray-500">Hindi, Punjabi, and English widely spoken. Most signs and
+                            directions available in English.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6">Getting There</h3>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover-lift">
+                        <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                            <i data-lucide="plane" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h4 class="text-xl font-serif font-bold mb-2">By Air</h4>
+                        <p class="text-gray-500 mb-3 text-sm">Chandigarh International Airport is 11 km from city
+                            center. Well-connected to Delhi, Mumbai, Bangalore.</p>
+                        <div class="text-sm font-medium text-blue-600">30 min drive to city</div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover-lift">
+                        <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                            <i data-lucide="train" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h4 class="text-xl font-serif font-bold mb-2">By Train</h4>
+                        <p class="text-gray-500 mb-3 text-sm">Chandigarh Railway Station connects to major cities. Delhi
+                            trains run frequently throughout the day.</p>
+                        <div class="text-sm font-medium text-blue-600">3-4 hours from Delhi</div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover-lift">
+                        <div class="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                            <i data-lucide="car" class="h-6 w-6 text-blue-600"></i>
+                        </div>
+                        <h4 class="text-xl font-serif font-bold mb-2">By Road</h4>
+                        <p class="text-gray-500 mb-3 text-sm">National Highway connects to Delhi (260 km), Shimla (117
+                            km), and Amritsar (230 km).</p>
+                        <div class="text-sm font-medium text-blue-600">4-5 hours from Delhi</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6">Getting Around</h3>
+
+                <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover-lift">
+                        <h4 class="text-lg font-serif font-bold mb-2">Auto-rickshaws </h4>
+                        <p class="text-sm text-gray-500 mb-3">Metered and convenient for short distances. Available
+                            throughout the city.</p>
+                        <div class="flex items-start gap-2 bg-gray-100 p-3 rounded-md">
+                            <i data-lucide="info" class="h-4 w-4 text-blue-600 shrink-0 mt-0.5"></i>
+                            <p class="text-xs text-gray-600">Negotiate fare before starting or insist on meter.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover-lift">
+                        <h4 class="text-lg font-serif font-bold mb-2">Local Buses </h4>
+                        <p class="text-sm text-gray-500 mb-3">CTU (Chandigarh Transport Undertaking) operates extensive
+                            bus network.</p>
+                        <div class="flex items-start gap-2 bg-gray-100 p-3 rounded-md">
+                            <i data-lucide="info" class="h-4 w-4 text-blue-600 shrink-0 mt-0.5"></i>
+                            <p class="text-xs text-gray-600">Affordable and connects all sectors. Get a route map from
+                                tourist office.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover-lift">
+                        <h4 class="text-lg font-serif font-bold mb-2">Cycle Rentals</h4>
+                        <p class="text-sm text-gray-500 mb-3">Public bike-sharing system available. Perfect for
+                            exploring the well-planned sectors.</p>
+                        <div class="flex items-start gap-2 bg-gray-100 p-3 rounded-md">
+                            <i data-lucide="info" class="h-4 w-4 text-blue-600 shrink-0 mt-0.5"></i>
+                            <p class="text-xs text-gray-600">Download Hexi app for bike rentals at 180+ docking
+                                stations.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover-lift">
+                        <h4 class="text-lg font-serif font-bold mb-2">Taxi & Ride-sharing</h4>
+                        <p class="text-sm text-gray-500 mb-3">Ola and Uber available. Pre-paid taxis at airport and
+                            railway station.</p>
+                        <div class="flex items-start gap-2 bg-gray-100 p-3 rounded-md">
+                            <i data-lucide="info" class="h-4 w-4 text-blue-600 shrink-0 mt-0.5"></i>
+                            <p class="text-xs text-gray-600">Book in advance during peak tourist season.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="tours" class="py-10 md:py-16 bg-gradient-to-b from-white to-gray-100/50">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <div class="inline-block px-4 py-1.5 bg-blue-50 rounded-full border border-blue-100 mb-4">
+                    <span class="text-sm font-semibold text-blue-600 tracking-wide">OUR TOURS</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-gray-900" style="text-wrap: balance;">
+                    Curated <span class="text-blue-600">Experiences</span>
+                </h2>
+                <p class="text-lg text-gray-500">
+                    Choose from our carefully designed tours or let us create a custom experience just for you.
+                </p>
+            </div>
+
+            <div id="tours-grid" class="grid md:grid-cols-2 gap-8"></div>
+
+            <div class="mt-10 text-center">
+                <div
+                    class="inline-flex flex-col items-center gap-4 p-8 bg-blue-50/50 rounded-2xl border-2 border-blue-100">
+                    <h3 class="text-2xl font-serif font-bold text-gray-900">Want a Custom Tour?</h3>
+                    <p class="text-gray-500 max-w-md">
+                        We'll design a personalized experience tailored to your interests and schedule.
+                    </p>
+                    <button
+                        class="px-6 py-3 rounded-md border-2 border-blue-600 text-blue-600 font-medium hover:bg-blue-600 hover:text-white transition-all duration-200 bg-transparent">
+                        Create Custom Tour
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-10 md:py-16">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <div class="text-sm font-medium text-blue-600 mb-4 uppercase tracking-wider">Testimonials</div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-gray-900" style="text-wrap: balance;">
+                    What Travelers Say</h2>
+                <p class="text-lg text-gray-500">
+                    Don't just take our word for it. Here's what our guests have experienced.
+                </p>
+            </div>
+
+            <div id="testimonials-grid" class="grid md:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-10 md:py-16 bg-gray-50/50">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <div class="text-sm font-medium text-blue-600 mb-4 uppercase tracking-wider">FAQ</div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6" style="text-wrap: balance;">
+                    Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-500">Everything you need to know about touring Chandigarh with us.</p>
+            </div>
+
+            <div id="faq-container" class="max-w-3xl mx-auto"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-10 md:py-16 bg-gray-50 relative overflow-hidden">
+
+        <div class="absolute inset-0 opacity-5 pointer-events-none">
+            <div class="absolute top-0 left-0 w-1/3 h-1/3">
+                <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=400" alt="Background"
+                    class="w-full h-full object-cover">
+            </div>
+            <div class="absolute bottom-0 right-0 w-1/3 h-1/3">
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=400" alt="Background"
+                    class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16">
+
+                <div>
+                    <div class="text-sm font-medium text-blue-600 mb-4 uppercase tracking-wider">Get in Touch</div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-gray-900"
+                        style="text-wrap: balance;">Plan Your Visit</h2>
+                    <p class="text-lg text-gray-500 mb-8 leading-relaxed">
+                        Ready to explore The City Beautiful? Contact us to book your tour or ask any questions. We're
+                        here to make your Chandigarh experience unforgettable.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <i data-lucide="mail" class="h-5 w-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold mb-1 text-gray-900">Email</div>
+                                <a href="mailto:tours@chandigarh.guide"
+                                    class="text-gray-500 hover:text-blue-600 transition-colors">
+                                    tours@chandigarh.guide
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <i data-lucide="phone" class="h-5 w-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold mb-1 text-gray-900">Phone</div>
+                                <a href="tel:+911234567890" class="text-gray-500 hover:text-blue-600 transition-colors">
+                                    +91 123 456 7890
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg">
+                                <i data-lucide="map-pin" class="h-5 w-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold mb-1 text-gray-900">Location</div>
+                                <p class="text-gray-500">
+                                    Sector 17, Chandigarh
+                                    <br />
+                                    Punjab & Haryana, India
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 rounded-lg overflow-hidden shadow-md">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSajUUTW8cUplEcZaaqM26iMpaf63jt13KndQ&s"
+                            alt="Sector 17 Plaza Chandigarh" class="w-full h-48 object-cover">
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2 text-gray-700">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name"
+                                class="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2 text-gray-700">Email
+                                Address</label>
+                            <input type="email" id="email" placeholder="your@email.com"
+                                class="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50">
+                        </div>
+
+                        <div>
+                            <label for="tour" class="block text-sm font-medium mb-2 text-gray-700">Interested
+                                Tour</label>
+                            <input type="text" id="tour" placeholder="e.g., Architectural Heritage Tour"
+                                class="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2 text-gray-700">Message</label>
+                            <textarea id="message" placeholder="Tell us about your interests and preferred dates..."
+                                rows="4"
+                                class="flex min-h-[80px] w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent disabled:cursor-not-allowed disabled:opacity-50"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-blue-600 text-white hover:bg-blue-700 h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 disabled:pointer-events-none disabled:opacity-50 shadow hover:shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Chandigarh Tours</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                        Your trusted guide to experiencing The City Beautiful. Discover architecture, culture, and
+                        nature with local experts.
+                    </p>
+                    <div class="space-y-2 text-sm text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="phone" class="h-4 w-4"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="mail" class="h-4 w-4"></i>
+                            <span>info@chandigarhtours.com</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="h-4 w-4"></i>
+                            <span>Sector 17, Chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#tours" class="text-gray-400 hover:text-white transition-colors">Our Tours</a></li>
+                        <li><a href="#attractions"
+                                class="text-gray-400 hover:text-white transition-colors">Attractions</a></li>
+                        <li><a href="#food-culture" class="text-gray-400 hover:text-white transition-colors">Food &
+                                Culture</a></li>
+                        <li><a href="#travel-info" class="text-gray-400 hover:text-white transition-colors">Travel
+                                Information</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Popular Tours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Architectural
+                                Heritage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Gardens & Nature</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Cultural Experience</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Full Day Tour</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Food & Markets</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Custom Private
+                                Tours</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex gap-4 mb-6">
+                        <a href="#" class="bg-white/10 p-2 rounded hover:bg-white/20 transition-colors"><i
+                                data-lucide="facebook" class="h-5 w-5"></i></a>
+                        <a href="#" class="bg-white/10 p-2 rounded hover:bg-white/20 transition-colors"><i
+                                data-lucide="instagram" class="h-5 w-5"></i></a>
+                        <a href="#" class="bg-white/10 p-2 rounded hover:bg-white/20 transition-colors"><i
+                                data-lucide="twitter" class="h-5 w-5"></i></a>
+                        <a href="#" class="bg-white/10 p-2 rounded hover:bg-white/20 transition-colors"><i
+                                data-lucide="youtube" class="h-5 w-5"></i></a>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Newsletter</h4>
+                        <p class="text-sm text-gray-400 mb-2">Get travel tips and special offers</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; <span id="year">2024</span> Chandigarh Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
