@@ -1,14 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    function safeCreateIcons() {
-        if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
-            try {
-                lucide.createIcons();
-            } catch (err) {
-                console.error('Failed to create Lucide icons:', err);
-            }
-        }
-    }
+    
+    
+    
+
+    
     const attractionsData = [
         {
             name: "Rock Garden",
@@ -707,7 +703,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
 
         
-        safeCreateIcons();
+        lucide.createIcons();
     }
 
     
@@ -754,7 +750,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
 
         
-        safeCreateIcons();
+        lucide.createIcons();
     }
 
     
@@ -872,7 +868,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
 
                 
-                safeCreateIcons();
+                lucide.createIcons();
             })
             .catch(function (error) {
                 console.error("Failed to fetch live weather:", error);
@@ -887,7 +883,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (iconWrapper) {
                     iconWrapper.innerHTML = `<i data-lucide="cloud" class="h-6 w-6 text-teal-600" id="weather-icon"></i>`;
                 }
-                safeCreateIcons();
+                lucide.createIcons();
             });
     }
 
@@ -908,7 +904,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     
-    safeCreateIcons();
+    lucide.createIcons();
 
     
     const yearEl = document.getElementById('year');
@@ -922,20 +918,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     function bookTour(tourTitle) {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-            const headerOffset = 80;
-            const elementPosition = contactSection.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + (window.scrollY || window.pageYOffset) - headerOffset;
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        }
+        window.location.hash = "contact"; 
         const tourInput = document.getElementById('tour');
         if (tourInput) {
             tourInput.value = tourTitle; 
-            tourInput.focus({ preventScroll: true });           
+            tourInput.focus();           
         }
     }
 
@@ -1021,7 +1008,7 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.classList.remove("hidden");
             document.body.style.overflow = "hidden"; 
         }
-        safeCreateIcons(); 
+        lucide.createIcons(); 
     }
 
     
@@ -1303,14 +1290,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (const link of navLinks) {
         link.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId === '#') {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-                return;
-            }
+            if (targetId === '#') return;
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
@@ -1329,7 +1309,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + (window.scrollY || window.pageYOffset) - headerOffset;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
                 window.scrollTo({
                     top: offsetPosition,

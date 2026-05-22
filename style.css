@@ -12,12 +12,11 @@
     --slate-100: #f1f5f9;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
+    
     overflow-x: hidden;
+    
+    scroll-behavior: smooth;
 }
 
 
