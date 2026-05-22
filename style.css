@@ -12,12 +12,15 @@
     --slate-100: #f1f5f9;
 }
 
-body {
-    
-    overflow-x: hidden;
-    
+html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
+
+body {
+    overflow-x: hidden;
+}
+
 
 
 .text-primary-teal {

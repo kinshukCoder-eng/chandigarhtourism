@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    function safeCreateIcons() {
+        if (typeof lucide !== 'undefined' && lucide.createIcons) {
+            try {
+                lucide.createIcons();
+            } catch (err) {
+                console.error("Lucide icon creation failed:", err);
+            }
+        }
+    }
+
     
     
     
@@ -703,7 +713,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
 
         
-        lucide.createIcons();
+        safeCreateIcons();
     }
 
     
@@ -750,7 +760,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
 
         
-        lucide.createIcons();
+        safeCreateIcons();
     }
 
     
@@ -868,7 +878,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
 
                 
-                lucide.createIcons();
+                safeCreateIcons();
             })
             .catch(function (error) {
                 console.error("Failed to fetch live weather:", error);
@@ -883,7 +893,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (iconWrapper) {
                     iconWrapper.innerHTML = `<i data-lucide="cloud" class="h-6 w-6 text-teal-600" id="weather-icon"></i>`;
                 }
-                lucide.createIcons();
+                safeCreateIcons();
             });
     }
 
@@ -904,7 +914,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     
-    lucide.createIcons();
+    safeCreateIcons();
 
     
     const yearEl = document.getElementById('year');
@@ -918,7 +928,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     
     function bookTour(tourTitle) {
-        window.location.hash = "contact"; 
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            const headerOffset = 80;
+            const elementPosition = contactSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + (window.scrollY || window.pageYOffset) - headerOffset;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+            if (history.pushState) {
+                history.pushState(null, null, '#contact');
+            } else {
+                window.location.hash = 'contact';
+            }
+        } else {
+            window.location.hash = "contact";
+        }
         const tourInput = document.getElementById('tour');
         if (tourInput) {
             tourInput.value = tourTitle; 
@@ -1008,7 +1034,7 @@ document.addEventListener("DOMContentLoaded", function () {
             modal.classList.remove("hidden");
             document.body.style.overflow = "hidden"; 
         }
-        lucide.createIcons(); 
+        safeCreateIcons(); 
     }
 
     
@@ -1295,7 +1321,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (targetElement) {
                 e.preventDefault();
 
-                
                 const mobileMenuEl = document.getElementById('mobile-menu');
                 const iconMenuEl = document.getElementById('icon-menu');
                 const iconCloseEl = document.getElementById('icon-close');
@@ -1306,10 +1331,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.body.style.overflow = "";
                 }
 
-                
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const offsetPosition = elementPosition + (window.scrollY || window.pageYOffset) - headerOffset;
 
                 window.scrollTo({
                     top: offsetPosition,
