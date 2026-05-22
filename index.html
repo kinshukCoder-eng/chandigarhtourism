@@ -5,16 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandigarh Tourism - The City Beautiful Official Guide</title>
-    <meta name="description" content="Explore India's first planned city designed by Le Corbusier. Complete guide to attractions, official CITCO stay, Hop-On Hop-Off buses, suggested itineraries, and booking information.">
-    <meta name="keywords" content="Chandigarh Tourism, Rock Garden, Capitol Complex, Sukhna Lake, CITCO Hotels, Bird Park, Le Corbusier, Travel Guide">
+    <meta name="description"
+        content="Explore India's first planned city designed by Le Corbusier. Complete guide to attractions, official CITCO stay, Hop-On Hop-Off buses, suggested itineraries, and booking information.">
+    <meta name="keywords"
+        content="Chandigarh Tourism, Rock Garden, Capitol Complex, Sukhna Lake, CITCO Hotels, Bird Park, Le Corbusier, Travel Guide">
     <link rel="icon" type="image/x-icon" href="download.jpg">
-    
+
     <!-- Google Fonts for premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
+    
+    <!-- 
+      Tailwind CSS Framework and Theme Customization:
+      Extended theme definitions provide color mappings for Deep Teal (representing Chandigarh's green cover)
+      and Indigo (representing structured modernist planning), alongside custom font pairings.
+    -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -51,10 +61,20 @@
 
 <body class="font-sans antialiased bg-slate-50/50 text-slate-800">
 
+    <!-- 
+      Scroll Progress Bar:
+      Container elements used by script.js's window scroll listener to calculate and update 
+      width dynamically based on page scroll percentages.
+    -->
     <div class="fixed top-0 left-0 w-full h-1.5 bg-slate-200 z-[60]">
         <div id="progress-bar" class="h-full bg-teal-600 w-0 transition-all duration-75 ease-out"></div>
     </div>
 
+    <!-- 
+      Navigation Header (Main Header):
+      Has id="main-header" so script.js can add or remove the '.nav-hidden' utility class
+      to hide the bar on scroll-down and show it when scrolling back up.
+    -->
     <header id="main-header"
         class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/85 backdrop-blur-md border-b border-slate-200/50">
         <nav class="container mx-auto px-4 py-4">
@@ -67,25 +87,37 @@
                     </div>
                 </a>
 
+                <!-- 
+                  Desktop Navigation Menu:
+                  Visually hidden on small devices ('hidden'), visible from medium devices upward ('md:flex').
+                  Anchor links point to unique element IDs for scrolling. Links with '.hover-underline' 
+                  trigger the gradient underline slide animations defined in style.css.
+                -->
                 <div class="hidden md:flex items-center gap-6">
                     <a href="#about"
-                        class="relative text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors hover-underline">About</a>
+                        class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">About</a>
                     <a href="#attractions"
-                        class="relative text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors hover-underline">Attractions</a>
+                        class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">Attractions</a>
                     <a href="#itineraries"
-                        class="relative text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors hover-underline">Itineraries</a>
+                        class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">Itineraries</a>
                     <a href="#food-culture"
-                        class="relative text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors hover-underline">Food & Culture</a>
+                        class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">Food
+                        & Culture</a>
                     <a href="#stay"
-                        class="relative text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors hover-underline">Stay</a>
+                        class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">Stay</a>
                     <a href="#tours"
-                        class="relative text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors hover-underline">Tours</a>
+                        class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">Tours</a>
                     <a href="#travel-info"
-                        class="relative text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors hover-underline">Travel Info</a>
+                        class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">Travel
+                        Info</a>
                     <a href="#contact"
-                        class="relative text-sm font-medium text-slate-700 hover:text-teal-600 transition-colors hover-underline">Contact</a>
+                        class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">Contact</a>
                 </div>
 
+                <!-- 
+                  Header CTA Booking Button:
+                  Desktop-only CTA element styled with gradient colors matching the design system.
+                -->
                 <div class="hidden md:block">
                     <a href="#contact"
                         class="bg-gradient-to-r from-teal-600 to-indigo-600 text-white hover:from-teal-750 hover:to-indigo-750 px-5 py-2.5 rounded-xl text-sm font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 inline-block">
@@ -103,7 +135,13 @@
         </nav>
     </header>
 
-    <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-16 bottom-0 bg-white/95 backdrop-blur-md z-40 overflow-y-auto px-6 py-8 border-t border-slate-200 shadow-xl flex flex-col justify-between">
+    <!-- 
+      Mobile Navigation Menu Overlay:
+      Controlled via script.js toggle listeners. Starts hidden (using Tailwind's '.hidden') 
+      and is displayed/hidden by toggling classes when #mobile-menu-btn is clicked.
+    -->
+    <div id="mobile-menu"
+        class="hidden md:hidden fixed inset-x-0 top-16 bottom-0 bg-white/95 backdrop-blur-md z-40 overflow-y-auto px-6 py-8 border-t border-slate-200 shadow-xl flex flex-col justify-between">
         <div class="flex flex-col gap-4">
             <a href="#about"
                 class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">About</a>
@@ -112,13 +150,15 @@
             <a href="#itineraries"
                 class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">Itineraries</a>
             <a href="#food-culture"
-                class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">Food & Culture</a>
+                class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">Food
+                & Culture</a>
             <a href="#stay"
                 class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">Stay</a>
             <a href="#tours"
                 class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">Tours</a>
             <a href="#travel-info"
-                class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">Travel Info</a>
+                class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">Travel
+                Info</a>
             <a href="#contact"
                 class="mobile-link text-base font-semibold text-slate-800 hover:text-teal-650 transition-colors py-2.5 border-b border-slate-100">Contact</a>
         </div>
@@ -133,8 +173,8 @@
     <section class="relative pt-20 pb-8 md:pt-28 md:pb-16 overflow-hidden flex items-center min-h-[85vh]">
 
         <div id="hero-bg" class="absolute inset-0 z-0 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600" alt="Chandigarh Rock Garden"
-                class="w-full h-full object-cover">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfb7Pv5Ehfvg9BwNWyJplsPvcyOHPCRdvyvA&s"
+                alt="Chandigarh Rock Garden" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/40"></div>
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(13,148,136,0.08),transparent_50%)]">
             </div>
@@ -148,7 +188,8 @@
                     <span class="text-sm font-semibold text-teal-750 tracking-wide">Experience The City Beautiful</span>
                 </div>
 
-                <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight text-slate-900 text-balance">
+                <h1
+                    class="text-4xl sm:text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight text-slate-900 text-balance">
                     Discover
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">
                         Chandigarh's
@@ -178,6 +219,10 @@
                     </a>
                 </div>
 
+                <!-- 
+                  Hero Stats Row:
+                  A simple 3-column grid demonstrating green cover and visitor ratings.
+                -->
                 <div class="mt-12 pt-8 border-t border-slate-200 grid grid-cols-3 gap-6">
                     <div>
                         <div class="text-3xl font-bold text-teal-600 mb-1">10k+</div>
@@ -200,6 +245,11 @@
     <section id="about" class="py-12 md:py-20 bg-slate-50/50">
         <div class="container mx-auto px-4">
 
+            <!-- 
+              About Section Content Layout:
+              Left side details the structural history of Le Corbusier's project.
+              Right side provides a staggered visual gallery featuring transform hover-lifts.
+            -->
             <div class="grid md:grid-cols-2 gap-12 items-center mb-10">
 
                 <div class="scroll-reveal">
@@ -249,20 +299,21 @@
                     </p>
                 </div>
 
+                <!-- Staggered grid photo gallery -->
                 <div class="grid grid-cols-2 gap-4 scroll-reveal delay-200">
                     <div class="space-y-4">
-                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8tVyqQ1e7HMwIYHbJ91dCviYgcryn2r8y7g&s"
                             alt="Open Hand Monument"
                             class="w-full h-40 sm:h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUSRV6h9SifgfGA5RAlNCb6DoHlOCFc-WYkw&s"
                             alt="High Court"
                             class="w-full h-32 sm:h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
                     </div>
                     <div class="space-y-4 pt-8">
-                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=800"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQee5e3Km27tPqY_w1_XCXO2Bs4eVnOhb3w&s"
                             alt="Sukhna Lake"
                             class="w-full h-32 sm:h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
-                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3c5RZ4YczccWGOcXc7ojz8mOxvYOUG6H5vQ&s"
                             alt="Welcome to Chandigarh"
                             class="w-full h-40 sm:h-64 object-cover rounded-lg shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]">
                     </div>
@@ -272,7 +323,8 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 scroll-reveal">
 
                 <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center hover-lift shadow-sm">
-                    <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
+                    <div
+                        class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
                         <i data-lucide="users" class="h-6 w-6 text-teal-600"></i>
                     </div>
                     <div class="text-3xl font-bold font-serif mb-2 text-slate-900">10,000+</div>
@@ -280,7 +332,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center hover-lift shadow-sm">
-                    <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
+                    <div
+                        class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
                         <i data-lucide="award" class="h-6 w-6 text-teal-600"></i>
                     </div>
                     <div class="text-3xl font-bold font-serif mb-2 text-slate-900">15+</div>
@@ -288,7 +341,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center hover-lift shadow-sm">
-                    <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
+                    <div
+                        class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
                         <i data-lucide="map-pin" class="h-6 w-6 text-teal-600"></i>
                     </div>
                     <div class="text-3xl font-bold font-serif mb-2 text-slate-900">30+</div>
@@ -296,7 +350,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center hover-lift shadow-sm">
-                    <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
+                    <div
+                        class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
                         <i data-lucide="star" class="h-6 w-6 text-teal-600"></i>
                     </div>
                     <div class="text-3xl font-bold font-serif mb-2 text-slate-900">4.9/5</div>
@@ -304,7 +359,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center hover-lift shadow-sm">
-                    <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
+                    <div
+                        class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
                         <i data-lucide="building-2" class="h-6 w-6 text-teal-600"></i>
                     </div>
                     <div class="text-3xl font-bold font-serif mb-2 text-slate-900">114 km²</div>
@@ -312,7 +368,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center hover-lift shadow-sm">
-                    <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
+                    <div
+                        class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
                         <i data-lucide="trees" class="h-6 w-6 text-teal-600"></i>
                     </div>
                     <div class="text-3xl font-bold font-serif mb-2 text-slate-900">35%</div>
@@ -320,7 +377,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center hover-lift shadow-sm">
-                    <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
+                    <div
+                        class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
                         <i data-lucide="bike" class="h-6 w-6 text-teal-600"></i>
                     </div>
                     <div class="text-3xl font-bold font-serif mb-2 text-slate-900">15 km</div>
@@ -328,7 +386,8 @@
                 </div>
 
                 <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center hover-lift shadow-sm">
-                    <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
+                    <div
+                        class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100">
                         <i data-lucide="languages" class="h-6 w-6 text-teal-600"></i>
                     </div>
                     <div class="text-3xl font-bold font-serif mb-2 text-slate-900">86%</div>
@@ -396,15 +455,24 @@
                 <div class="inline-block mb-4 px-4 py-1.5 bg-teal-50 rounded-full border border-teal-100">
                     <span class="text-sm font-semibold text-teal-650 tracking-wide uppercase">Explore</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Popular Attractions</h2>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Popular
+                    Attractions</h2>
                 <p class="text-lg text-slate-655">
-                    From Le Corbusier's architectural marvels to serene gardens and cultural landmarks, discover what makes Chandigarh truly special.
+                    From Le Corbusier's architectural marvels to serene gardens and cultural landmarks, discover what
+                    makes Chandigarh truly special.
                 </p>
                 <p class="text-sm text-teal-600 mt-2 font-medium flex items-center justify-center gap-1">
-                    <i data-lucide="info" class="h-4 w-4"></i> Click any attraction to view timings, entry fees, and travel details.
+                    <i data-lucide="info" class="h-4 w-4"></i> Click any attraction to view timings, entry fees, and
+                    travel details.
                 </p>
             </div>
 
+            <!-- 
+              Attractions Grid Container:
+              Populated dynamically by script.js. The JS parses the attractions dataset,
+              renders structural cards with image, titles, tags, and custom data attributes (e.g. data-id),
+              and appends the generated template string here.
+            -->
             <div id="attractions-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal delay-100"></div>
         </div>
     </section>
@@ -416,31 +484,44 @@
                 <div class="inline-block mb-4 px-4 py-1.5 bg-teal-50 rounded-full border border-teal-100">
                     <span class="text-sm font-semibold text-teal-650 tracking-wide uppercase">Plan Your Days</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Suggested Itineraries</h2>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Suggested
+                    Itineraries</h2>
                 <p class="text-lg text-slate-555">
-                    Maximize your visit with official routes recommended by Chandigarh Tourism. Select a duration below to view your daily plan.
+                    Maximize your visit with official routes recommended by Chandigarh Tourism. Select a duration below
+                    to view your daily plan.
                 </p>
             </div>
 
             <!-- Itinerary Tabs -->
             <div class="flex justify-center mb-10 scroll-reveal delay-100">
                 <div class="inline-flex p-1 bg-slate-100 rounded-2xl border border-slate-200/30">
-                    <button id="tab-1day" class="itinerary-tab px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-slate-900 shadow-sm" data-duration="1day">
+                    <button id="tab-1day"
+                        class="itinerary-tab px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 bg-white text-slate-900 shadow-sm"
+                        data-duration="1day">
                         1-Day Highlights
                     </button>
-                    <button id="tab-2day" class="itinerary-tab px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-500 hover:text-slate-900" data-duration="2day">
+                    <button id="tab-2day"
+                        class="itinerary-tab px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-500 hover:text-slate-900"
+                        data-duration="2day">
                         2-Day In-Depth
                     </button>
-                    <button id="tab-3day" class="itinerary-tab px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-500 hover:text-slate-900" data-duration="3day">
+                    <button id="tab-3day"
+                        class="itinerary-tab px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 text-slate-500 hover:text-slate-900"
+                        data-duration="3day">
                         3-Day Complete Tour
                     </button>
                 </div>
             </div>
 
-            <!-- Itinerary Timeline Output -->
-            <div class="max-w-3xl mx-auto bg-slate-50/50 border border-slate-200/60 rounded-3xl p-6 md:p-10 shadow-sm scroll-reveal delay-200">
+            <!-- 
+              Itinerary Timeline Output Container:
+              This timeline-container is injected with a structured list of timeline-item nodes
+              containing days, highlights, descriptions, and duration points whenever a tab is switched.
+            -->
+            <div
+                class="max-w-3xl mx-auto bg-slate-50/50 border border-slate-200/60 rounded-3xl p-6 md:p-10 shadow-sm scroll-reveal delay-200">
                 <div id="itinerary-timeline" class="timeline-container">
-                    <!-- Loaded dynamically via script.js -->
+                    <!-- Loaded dynamically via script.js (tab-switch triggers) -->
                 </div>
             </div>
         </div>
@@ -453,13 +534,19 @@
                 <div class="inline-block mb-4 px-4 py-1.5 bg-teal-50 rounded-full border border-teal-100">
                     <span class="text-sm font-semibold text-teal-650 tracking-wide uppercase">Taste & Traditions</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Food & Culture</h2>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Food & Culture
+                </h2>
                 <p class="text-lg text-slate-555">
-                    Experience the rich flavors of Punjabi cuisine, vibrant street food culture, traditional festivals, and the artistic heritage that make Chandigarh unique.
+                    Experience the rich flavors of Punjabi cuisine, vibrant street food culture, traditional festivals,
+                    and the artistic heritage that make Chandigarh unique.
                 </p>
             </div>
-            
-            <!-- (Middle grids stay the same, dynamically loaded via script.js) -->
+
+            <!-- 
+              Food, Culture & Entertainment Grids:
+              These three containers receive dynamically rendered card elements 
+              constructed using template loops in script.js.
+            -->
             <div class="mb-10 scroll-reveal delay-100">
                 <h3 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6">Culinary Delights</h3>
                 <div id="culinary-grid" class="grid md:grid-cols-3 gap-8"></div>
@@ -485,13 +572,20 @@
                 <div class="inline-block mb-4 px-4 py-1.5 bg-teal-50 rounded-full border border-teal-100">
                     <span class="text-sm font-semibold text-teal-650 tracking-wide uppercase">Where to Stay</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Official CITCO Stay</h2>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Official CITCO
+                    Stay</h2>
                 <p class="text-lg text-slate-555">
-                    Experience premium government-managed hospitality. Book directly at these official CITCO (Chandigarh Industrial & Tourism Development Corporation) properties.
+                    Experience premium government-managed hospitality. Book directly at these official CITCO (Chandigarh
+                    Industrial & Tourism Development Corporation) properties.
                 </p>
             </div>
 
-            <div id="citco-stay-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto scroll-reveal delay-100">
+            <!-- 
+              CITCO Stay Grid:
+              Injected dynamically in script.js using details from the official CITCO hotel stay list.
+            -->
+            <div id="citco-stay-grid"
+                class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto scroll-reveal delay-100">
                 <!-- Dynamically loaded via script.js -->
             </div>
         </div>
@@ -504,7 +598,8 @@
                 <div class="inline-block mb-4 px-4 py-1.5 bg-teal-50 rounded-full border border-teal-100">
                     <span class="text-sm font-semibold text-teal-650 tracking-wide uppercase">Plan Your Visit</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Travel Information</h2>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6 text-balance">Travel
+                    Information</h2>
                 <p class="text-lg text-slate-555">
                     Everything you need to know to make your Chandigarh visit smooth and memorable.
                 </p>
@@ -521,14 +616,23 @@
                             (May-July) when temperatures exceed 40°C.</p>
                     </div>
 
-                    <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center shadow-sm hover-lift flex flex-col justify-between" id="weather-card">
+                    <!-- 
+                      Dynamic Weather Widget Card:
+                      script.js attempts to fetch real-time weather details for Chandigarh from a public API,
+                      updating this card's inner content and changing weather-icon-wrapper background classes.
+                      In case of network failures, it gracefully falls back to monthly average weather details.
+                    -->
+                    <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center shadow-sm hover-lift flex flex-col justify-between"
+                        id="weather-card">
                         <div>
-                            <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100" id="weather-icon-wrapper">
+                            <div class="h-12 w-12 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4 border border-teal-100"
+                                id="weather-icon-wrapper">
                                 <i data-lucide="cloud" class="h-6 w-6 text-teal-600" id="weather-icon"></i>
                             </div>
                             <h3 class="text-lg font-serif font-bold mb-2">Weather</h3>
                             <div id="weather-details" class="space-y-1">
-                                <p class="text-sm text-slate-555">Winter: 5-20°C, Summer: 25-45°C, Monsoon: July-September. Pack layers for winter evenings.</p>
+                                <p class="text-sm text-slate-555">Winter: 5-20°C, Summer: 25-45°C, Monsoon:
+                                    July-September. Pack layers for winter evenings.</p>
                             </div>
                         </div>
                     </div>
@@ -565,7 +669,8 @@
                             <i data-lucide="train" class="h-6 w-6 text-teal-600"></i>
                         </div>
                         <h4 class="text-xl font-serif font-bold mb-2">By Train</h4>
-                        <p class="text-slate-555 mb-3 text-sm">Chandigarh Railway Station connects to major cities. Delhi
+                        <p class="text-slate-555 mb-3 text-sm">Chandigarh Railway Station connects to major cities.
+                            Delhi
                             trains run frequently throughout the day.</p>
                         <div class="text-sm font-semibold text-teal-600">3-4 hours from Delhi</div>
                     </div>
@@ -588,10 +693,12 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-8">
 
-                    <div class="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm hover-lift flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm hover-lift flex flex-col justify-between">
                         <div>
                             <h4 class="text-lg font-serif font-bold mb-2 text-slate-800">Auto-rickshaws</h4>
-                            <p class="text-sm text-slate-555 mb-4">Metered and convenient for short distances. Available throughout the city.</p>
+                            <p class="text-sm text-slate-555 mb-4">Metered and convenient for short distances. Available
+                                throughout the city.</p>
                         </div>
                         <div class="flex items-start gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
                             <i data-lucide="info" class="h-4 w-4 text-teal-600 shrink-0 mt-0.5"></i>
@@ -599,78 +706,108 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm hover-lift flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm hover-lift flex flex-col justify-between">
                         <div>
                             <h4 class="text-lg font-serif font-bold mb-2 text-slate-800">Local Buses</h4>
-                            <p class="text-sm text-slate-555 mb-4">CTU (Chandigarh Transport Undertaking) operates an extensive and reliable bus network.</p>
+                            <p class="text-sm text-slate-555 mb-4">CTU (Chandigarh Transport Undertaking) operates an
+                                extensive and reliable bus network.</p>
                         </div>
                         <div class="flex items-start gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
                             <i data-lucide="info" class="h-4 w-4 text-teal-600 shrink-0 mt-0.5"></i>
-                            <p class="text-xs text-slate-500">Affordable routes connecting all sectors. Route maps available at CTU stops.</p>
+                            <p class="text-xs text-slate-500">Affordable routes connecting all sectors. Route maps
+                                available at CTU stops.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm hover-lift flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm hover-lift flex flex-col justify-between">
                         <div>
                             <h4 class="text-lg font-serif font-bold mb-2 text-slate-800">Smart Cycle Rentals</h4>
-                            <p class="text-sm text-slate-555 mb-4">Public bike-sharing system available. Perfect for exploring the beautiful, flat sector layouts.</p>
+                            <p class="text-sm text-slate-555 mb-4">Public bike-sharing system available. Perfect for
+                                exploring the beautiful, flat sector layouts.</p>
                         </div>
                         <div class="flex items-start gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
                             <i data-lucide="info" class="h-4 w-4 text-teal-600 shrink-0 mt-0.5"></i>
-                            <p class="text-xs text-slate-500">Download the SmartBike app for bike rentals at 180+ docking stations.</p>
+                            <p class="text-xs text-slate-500">Download the SmartBike app for bike rentals at 180+
+                                docking stations.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm hover-lift flex flex-col justify-between">
+                    <div
+                        class="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm hover-lift flex flex-col justify-between">
                         <div>
                             <h4 class="text-lg font-serif font-bold mb-2 text-slate-800">Taxi & App Cabs</h4>
-                            <p class="text-sm text-slate-555 mb-4">Uber and Ola operate extensively in Chandigarh. Pre-paid taxi booths are at airport/station.</p>
+                            <p class="text-sm text-slate-555 mb-4">Uber and Ola operate extensively in Chandigarh.
+                                Pre-paid taxi booths are at airport/station.</p>
                         </div>
                         <div class="flex items-start gap-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
                             <i data-lucide="info" class="h-4 w-4 text-teal-600 shrink-0 mt-0.5"></i>
-                            <p class="text-xs text-slate-500">Book cabs via app in advance during morning/evening peak hours.</p>
+                            <p class="text-xs text-slate-500">Book cabs via app in advance during morning/evening peak
+                                hours.</p>
                         </div>
                     </div>
 
                 </div>
 
                 <!-- Hop-on Hop-off Double Decker bus featured card -->
-                <div class="max-w-4xl mx-auto bg-gradient-to-r from-teal-500/10 to-indigo-500/10 border-2 border-teal-500/20 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-sm scroll-reveal delay-100">
+                <div
+                    class="max-w-4xl mx-auto bg-gradient-to-r from-teal-500/10 to-indigo-500/10 border-2 border-teal-500/20 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-sm scroll-reveal delay-100">
                     <div class="bg-teal-600 text-white p-4.5 rounded-2xl mx-auto md:mx-0">
                         <i data-lucide="bus" class="h-10 w-10"></i>
                     </div>
                     <div class="flex-1 text-center md:text-left">
                         <div class="flex items-center justify-center md:justify-start gap-2 mb-1.5">
-                            <span class="text-xs font-semibold bg-teal-100 text-teal-850 px-2.5 py-0.5 rounded-full uppercase tracking-wider">CITCO Recommendation</span>
+                            <span
+                                class="text-xs font-semibold bg-teal-100 text-teal-850 px-2.5 py-0.5 rounded-full uppercase tracking-wider">CITCO
+                                Recommendation</span>
                             <span class="text-xs font-bold text-indigo-650">★ Highly Recommended</span>
                         </div>
-                        <h4 class="text-2xl font-serif font-bold text-slate-900 mb-2">Hop-On Hop-Off Double-Decker Tourist Bus</h4>
+                        <h4 class="text-2xl font-serif font-bold text-slate-900 mb-2">Hop-On Hop-Off Double-Decker
+                            Tourist Bus</h4>
                         <p class="text-slate-655 text-sm leading-relaxed">
-                            The most iconic way to tour Chandigarh! Run by CITCO, this open-roof double-decker bus traverses a dedicated tourist circuit stopping at all major sights like Sukhna Lake, Rock Garden, Rose Garden, and Sector 17.
+                            The most iconic way to tour Chandigarh! Run by CITCO, this open-roof double-decker bus
+                            traverses a dedicated tourist circuit stopping at all major sights like Sukhna Lake, Rock
+                            Garden, Rose Garden, and Sector 17.
                         </p>
                     </div>
-                    <div class="text-center md:text-right shrink-0 mt-4 md:mt-0">
+                    <div
+                        class="text-center md:text-right shrink-0 mt-4 md:mt-0 flex flex-col items-center md:items-end">
                         <div class="text-2xl font-bold text-slate-900">₹100</div>
                         <div class="text-xs text-slate-500 mb-3">Full Day Pass</div>
-                        <a href="https://chandigarhtourism.gov.in/#Eticketing" target="_blank" class="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-medium text-sm px-5 py-2.5 rounded-xl shadow-md transition-all">
-                            Book Tickets Online
-                            <i data-lucide="external-link" class="ml-1.5 h-3.5 w-3.5"></i>
-                        </a>
+                        <div class="flex flex-wrap gap-2 justify-center md:justify-end">
+                            <a href="https://play.google.com/store/apps/details?id=com.chandigarh_tourism"
+                                target="_blank"
+                                class="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white font-medium text-xs px-4 py-2 rounded-xl shadow-sm transition-all gap-1.5">
+                                <i data-lucide="play" class="h-3.5 w-3.5"></i>
+                                Android App
+                            </a>
+                            <a href="https://apps.apple.com/app/chandigarh-tourism/id1534967396" target="_blank"
+                                class="inline-flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-xs px-4 py-2 rounded-xl shadow-sm transition-all gap-1.5">
+                                <i data-lucide="apple" class="h-3.5 w-3.5"></i>
+                                iOS App
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Official E-Ticketing Helper -->
-            <div class="mt-16 bg-slate-50 border border-slate-200/60 rounded-3xl p-6 md:p-10 max-w-5xl mx-auto shadow-sm scroll-reveal">
+            <div
+                class="mt-16 bg-slate-50 border border-slate-200/60 rounded-3xl p-6 md:p-10 max-w-5xl mx-auto shadow-sm scroll-reveal">
                 <div class="flex flex-col lg:flex-row items-center gap-8">
                     <div class="lg:w-1/2">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 rounded-full border border-amber-200 text-amber-700 mb-4 text-xs font-semibold uppercase tracking-wider">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 rounded-full border border-amber-200 text-amber-700 mb-4 text-xs font-semibold uppercase tracking-wider">
                             <i data-lucide="ticket" class="h-3.5 w-3.5"></i>
                             Official Bookings
                         </div>
-                        <h3 class="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-4">Official E-Ticketing Portal</h3>
+                        <h3 class="text-2xl md:text-3xl font-serif font-bold text-slate-900 mb-4">Official E-Ticketing &
+                            Bookings</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                            Chandigarh Tourism provides an official online e-ticketing platform. Avoid long queues by booking tickets in advance for your favorite destinations directly from the UT Administration portal.
+                            Official tickets for key attractions like the Hop-On Hop-Off Bus, Chandigarh Bird Park, and
+                            Rock Garden are now processed via the official "Chandigarh Tourism" mobile app. Download it
+                            now to secure your tickets instantly.
                         </p>
                         <ul class="space-y-2.5 mb-6 text-sm text-slate-600">
                             <li class="flex items-center gap-2 text-slate-700 font-medium">
@@ -688,48 +825,68 @@
                         </ul>
                     </div>
                     <div class="lg:w-1/2 w-full grid grid-cols-2 gap-4">
-                        <a href="https://chandigarhtourism.gov.in/#Eticketing" target="_blank" class="p-5 bg-white border border-slate-100 hover:border-teal-500 hover:shadow-md rounded-2xl flex flex-col justify-between hover-card transition-all group">
+                        <a href="https://play.google.com/store/apps/details?id=com.chandigarh_tourism" target="_blank"
+                            class="p-5 bg-white border border-slate-100 hover:border-teal-500 hover:shadow-md rounded-2xl flex flex-col justify-between hover-card transition-all group">
                             <div>
-                                <div class="bg-teal-50 p-2.5 rounded-xl w-fit text-teal-600 mb-3 group-hover:scale-105 transition-transform">
-                                    <i data-lucide="bus" class="h-5 w-5"></i>
+                                <div
+                                    class="bg-teal-50 p-2.5 rounded-xl w-fit text-teal-600 mb-3 group-hover:scale-105 transition-transform">
+                                    <i data-lucide="smartphone" class="h-5 w-5"></i>
                                 </div>
-                                <h4 class="font-serif font-bold text-slate-800 text-sm group-hover:text-teal-600 transition-colors">Hop-On Bus Pass</h4>
-                                <p class="text-slate-500 text-xs mt-1">Book 24-hr ticket</p>
+                                <h4
+                                    class="font-serif font-bold text-slate-800 text-sm group-hover:text-teal-600 transition-colors">
+                                    Android App</h4>
+                                <p class="text-slate-500 text-xs mt-1">Get on Play Store</p>
                             </div>
-                            <i data-lucide="arrow-right" class="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform self-end mt-4"></i>
+                            <i data-lucide="arrow-right"
+                                class="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform self-end mt-4"></i>
                         </a>
 
-                        <a href="https://chandigarhtourism.gov.in/#Eticketing" target="_blank" class="p-5 bg-white border border-slate-100 hover:border-teal-500 hover:shadow-md rounded-2xl flex flex-col justify-between hover-card transition-all group">
+                        <a href="https://apps.apple.com/app/chandigarh-tourism/id1534967396" target="_blank"
+                            class="p-5 bg-white border border-slate-100 hover:border-teal-500 hover:shadow-md rounded-2xl flex flex-col justify-between hover-card transition-all group">
                             <div>
-                                <div class="bg-teal-50 p-2.5 rounded-xl w-fit text-teal-600 mb-3 group-hover:scale-105 transition-transform">
-                                    <i data-lucide="bird" class="h-5 w-5"></i>
+                                <div
+                                    class="bg-teal-50 p-2.5 rounded-xl w-fit text-teal-600 mb-3 group-hover:scale-105 transition-transform">
+                                    <i data-lucide="smartphone" class="h-5 w-5"></i>
                                 </div>
-                                <h4 class="font-serif font-bold text-slate-800 text-sm group-hover:text-teal-600 transition-colors">Bird Park Ticket</h4>
-                                <p class="text-slate-500 text-xs mt-1">Select dates & slots</p>
+                                <h4
+                                    class="font-serif font-bold text-slate-800 text-sm group-hover:text-teal-600 transition-colors">
+                                    iOS App</h4>
+                                <p class="text-slate-500 text-xs mt-1">Get on App Store</p>
                             </div>
-                            <i data-lucide="arrow-right" class="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform self-end mt-4"></i>
+                            <i data-lucide="arrow-right"
+                                class="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform self-end mt-4"></i>
                         </a>
 
-                        <a href="https://chandigarhtourism.gov.in/pages/ccbooking" target="_blank" class="p-5 bg-white border border-slate-100 hover:border-teal-500 hover:shadow-md rounded-2xl flex flex-col justify-between hover-card transition-all group">
+                        <a href="https://chandigarhtourism.gov.in/capitol-complex/" target="_blank"
+                            class="p-5 bg-white border border-slate-100 hover:border-teal-500 hover:shadow-md rounded-2xl flex flex-col justify-between hover-card transition-all group">
                             <div>
-                                <div class="bg-teal-50 p-2.5 rounded-xl w-fit text-teal-600 mb-3 group-hover:scale-105 transition-transform">
+                                <div
+                                    class="bg-teal-50 p-2.5 rounded-xl w-fit text-teal-600 mb-3 group-hover:scale-105 transition-transform">
                                     <i data-lucide="building" class="h-5 w-5"></i>
                                 </div>
-                                <h4 class="font-serif font-bold text-slate-800 text-sm group-hover:text-teal-600 transition-colors">Capitol Complex</h4>
+                                <h4
+                                    class="font-serif font-bold text-slate-800 text-sm group-hover:text-teal-600 transition-colors">
+                                    Capitol Complex</h4>
                                 <p class="text-slate-500 text-xs mt-1">Book guided tour</p>
                             </div>
-                            <i data-lucide="arrow-right" class="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform self-end mt-4"></i>
+                            <i data-lucide="arrow-right"
+                                class="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform self-end mt-4"></i>
                         </a>
 
-                        <a href="https://chandigarhtourism.gov.in/shooting/" target="_blank" class="p-5 bg-white border border-slate-100 hover:border-teal-500 hover:shadow-md rounded-2xl flex flex-col justify-between hover-card transition-all group">
+                        <a href="https://chandigarhtourism.gov.in/shooting/" target="_blank"
+                            class="p-5 bg-white border border-slate-100 hover:border-teal-500 hover:shadow-md rounded-2xl flex flex-col justify-between hover-card transition-all group">
                             <div>
-                                <div class="bg-teal-50 p-2.5 rounded-xl w-fit text-teal-600 mb-3 group-hover:scale-105 transition-transform">
+                                <div
+                                    class="bg-teal-50 p-2.5 rounded-xl w-fit text-teal-600 mb-3 group-hover:scale-105 transition-transform">
                                     <i data-lucide="camera" class="h-5 w-5"></i>
                                 </div>
-                                <h4 class="font-serif font-bold text-slate-800 text-sm group-hover:text-teal-600 transition-colors">Shooting Permits</h4>
+                                <h4
+                                    class="font-serif font-bold text-slate-800 text-sm group-hover:text-teal-600 transition-colors">
+                                    Shooting Permits</h4>
                                 <p class="text-slate-500 text-xs mt-1">Book media locations</p>
                             </div>
-                            <i data-lucide="arrow-right" class="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform self-end mt-4"></i>
+                            <i data-lucide="arrow-right"
+                                class="h-4 w-4 text-slate-400 group-hover:translate-x-1 transition-transform self-end mt-4"></i>
                         </a>
                     </div>
                 </div>
@@ -747,7 +904,8 @@
                     <span class="text-sm font-semibold text-teal-650 tracking-wide uppercase">Our Tours</span>
                 </div>
                 <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-slate-900" style="text-wrap: balance;">
-                    Curated <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Experiences</span>
+                    Curated <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">Experiences</span>
                 </h2>
                 <p class="text-lg text-slate-555">
                     Choose from our carefully designed tours or let us create a custom experience just for you.
@@ -757,12 +915,15 @@
             <div id="tours-grid" class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto scroll-reveal delay-100"></div>
 
             <div class="mt-12 text-center">
-                <div class="inline-flex flex-col items-center gap-4 p-8 bg-gradient-to-br from-teal-500/5 to-indigo-500/5 rounded-3xl border-2 border-teal-500/10 max-w-xl mx-auto">
+                <div
+                    class="inline-flex flex-col items-center gap-4 p-8 bg-gradient-to-br from-teal-500/5 to-indigo-500/5 rounded-3xl border-2 border-teal-500/10 max-w-xl mx-auto">
                     <h3 class="text-2xl font-serif font-bold text-slate-900">Want a Custom Tour?</h3>
                     <p class="text-slate-555 text-sm">
                         We'll design a personalized experience tailored to your interests and schedule.
                     </p>
-                    <button class="tour-book-btn px-6 py-3 rounded-xl border-2 border-teal-600 text-teal-650 hover:bg-teal-600 hover:text-white font-bold transition-all duration-200 bg-transparent text-sm" data-title="Custom Tailored Tour">
+                    <button
+                        class="tour-book-btn px-6 py-3 rounded-xl border-2 border-teal-600 text-teal-650 hover:bg-teal-600 hover:text-white font-bold transition-all duration-200 bg-transparent text-sm"
+                        data-title="Custom Tailored Tour">
                         Create Custom Tour
                     </button>
                 </div>
@@ -786,7 +947,8 @@
                 </p>
             </div>
 
-            <div id="testimonials-grid" class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto scroll-reveal delay-100"></div>
+            <div id="testimonials-grid" class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto scroll-reveal delay-100">
+            </div>
         </div>
     </section>
 
@@ -803,7 +965,9 @@
                 <p class="text-lg text-slate-555">Everything you need to know about touring Chandigarh with us.</p>
             </div>
 
-            <div id="faq-container" class="max-w-3xl mx-auto bg-white border border-slate-200/60 rounded-3xl p-6 md:p-8 shadow-sm scroll-reveal delay-100"></div>
+            <div id="faq-container"
+                class="max-w-3xl mx-auto bg-white border border-slate-200/60 rounded-3xl p-6 md:p-8 shadow-sm scroll-reveal delay-100">
+            </div>
         </div>
     </section>
 
@@ -812,10 +976,12 @@
 
         <div class="absolute inset-0 opacity-5 pointer-events-none">
             <div class="absolute top-0 left-0 w-1/3 h-1/3">
-                <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=400" alt="Background" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?q=80&w=400" alt="Background"
+                    class="w-full h-full object-cover">
             </div>
             <div class="absolute bottom-0 right-0 w-1/3 h-1/3">
-                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=400" alt="Background" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=400" alt="Background"
+                    class="w-full h-full object-cover">
             </div>
         </div>
 
@@ -826,9 +992,11 @@
                     <div class="inline-block px-4 py-1.5 bg-teal-50 rounded-full border border-teal-100 mb-4">
                         <span class="text-sm font-semibold text-teal-650 tracking-wide uppercase">Get in Touch</span>
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-slate-900" style="text-wrap: balance;">Plan Your Visit</h2>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-slate-900"
+                        style="text-wrap: balance;">Plan Your Visit</h2>
                     <p class="text-lg text-slate-555 mb-8 leading-relaxed">
-                        Ready to explore The City Beautiful? Contact us to book your tour or ask any questions. We're here to make your Chandigarh experience unforgettable.
+                        Ready to explore The City Beautiful? Contact us to book your tour or ask any questions. We're
+                        here to make your Chandigarh experience unforgettable.
                     </p>
 
                     <div class="space-y-6">
@@ -838,7 +1006,8 @@
                             </div>
                             <div>
                                 <div class="font-bold text-slate-900 mb-0.5 text-sm">Email</div>
-                                <a href="mailto:tours@chandigarh.guide" class="text-sm text-slate-555 hover:text-teal-655 transition-colors">
+                                <a href="mailto:tours@chandigarh.guide"
+                                    class="text-sm text-slate-555 hover:text-teal-655 transition-colors">
                                     tours@chandigarh.guide
                                 </a>
                             </div>
@@ -850,7 +1019,8 @@
                             </div>
                             <div>
                                 <div class="font-bold text-slate-900 mb-0.5 text-sm">Phone</div>
-                                <a href="tel:+911234567890" class="text-sm text-slate-555 hover:text-teal-655 transition-colors">
+                                <a href="tel:+911234567890"
+                                    class="text-sm text-slate-555 hover:text-teal-655 transition-colors">
                                     +91 123 456 7890
                                 </a>
                             </div>
@@ -871,33 +1041,48 @@
                     </div>
 
                     <div class="mt-8 rounded-3xl overflow-hidden shadow-md border border-slate-200/50">
-                        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?q=80&w=800" alt="Sector 17 Plaza Chandigarh" class="w-full h-48 object-cover">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNXygzrq7HD_ysOYMQcUhC-srOe1t4iL7Fhg&s"
+                            alt="Sector 17 Plaza Chandigarh" class="w-full h-48 object-cover">
                     </div>
                 </div>
 
-                <div class="bg-slate-50 border border-slate-200/60 p-5 sm:p-8 rounded-3xl shadow-sm scroll-reveal delay-200">
+                <!-- 
+                  Contact Form:
+                  Monitored via script.js. Form submissions prevent default browser reload behavior,
+                  validate input fields, and show native alerts or success status cards.
+                -->
+                <div
+                    class="bg-slate-50 border border-slate-200/60 p-5 sm:p-8 rounded-3xl shadow-sm scroll-reveal delay-200">
                     <form id="contact-form" class="space-y-5">
                         <div>
-                            <label for="name" class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700">Your Name</label>
+                            <label for="name"
+                                class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700">Your
+                                Name</label>
                             <input type="text" id="name" required placeholder="Enter your name"
                                 class="flex h-11 w-full rounded-xl border border-slate-350 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all">
                         </div>
 
                         <div>
-                            <label for="email" class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700">Email Address</label>
+                            <label for="email"
+                                class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700">Email
+                                Address</label>
                             <input type="email" id="email" required placeholder="your@email.com"
                                 class="flex h-11 w-full rounded-xl border border-slate-350 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all">
                         </div>
 
                         <div>
-                            <label for="tour" class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700">Interested Tour</label>
+                            <label for="tour"
+                                class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700">Interested
+                                Tour</label>
                             <input type="text" id="tour" placeholder="e.g., Architectural Heritage Tour"
                                 class="flex h-11 w-full rounded-xl border border-slate-350 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all">
                         </div>
 
                         <div>
-                            <label for="message" class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700">Message</label>
-                            <textarea id="message" required maxlength="500" placeholder="Tell us about your interests and preferred dates..." rows="4"
+                            <label for="message"
+                                class="block text-xs font-bold uppercase tracking-wider mb-2 text-slate-700">Message</label>
+                            <textarea id="message" required maxlength="500"
+                                placeholder="Tell us about your interests and preferred dates..." rows="4"
                                 class="flex min-h-[90px] max-h-[150px] w-full rounded-xl border border-slate-350 bg-white px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent transition-all"></textarea>
                         </div>
 
@@ -921,7 +1106,8 @@
                 <div>
                     <h3 class="text-xl font-serif font-bold mb-4 text-teal-400">Chandigarh Tourism</h3>
                     <p class="text-slate-400 text-sm leading-relaxed mb-4">
-                        Your trusted guide to experiencing The City Beautiful. Discover architecture, culture, and nature with local experts.
+                        Your trusted guide to experiencing The City Beautiful. Discover architecture, culture, and
+                        nature with local experts.
                     </p>
                     <div class="space-y-2.5 text-xs text-slate-450">
                         <div class="flex items-center gap-2">
@@ -942,24 +1128,41 @@
                 <div>
                     <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#about" class="text-slate-400 hover:text-teal-400 transition-colors">About Us</a></li>
-                        <li><a href="#attractions" class="text-slate-400 hover:text-teal-400 transition-colors">Attractions</a></li>
-                        <li><a href="#itineraries" class="text-slate-400 hover:text-teal-400 transition-colors">Suggested Itineraries</a></li>
-                        <li><a href="#food-culture" class="text-slate-400 hover:text-teal-400 transition-colors">Food & Culture</a></li>
-                        <li><a href="#stay" class="text-slate-400 hover:text-teal-400 transition-colors">CITCO Hotels</a></li>
-                        <li><a href="#tours" class="text-slate-400 hover:text-teal-400 transition-colors">Our Tours</a></li>
+                        <li><a href="#about" class="text-slate-400 hover:text-teal-400 transition-colors">About Us</a>
+                        </li>
+                        <li><a href="#attractions"
+                                class="text-slate-400 hover:text-teal-400 transition-colors">Attractions</a></li>
+                        <li><a href="#itineraries"
+                                class="text-slate-400 hover:text-teal-400 transition-colors">Suggested Itineraries</a>
+                        </li>
+                        <li><a href="#food-culture" class="text-slate-400 hover:text-teal-400 transition-colors">Food &
+                                Culture</a></li>
+                        <li><a href="#stay" class="text-slate-400 hover:text-teal-400 transition-colors">CITCO
+                                Hotels</a></li>
+                        <li><a href="#tours" class="text-slate-400 hover:text-teal-400 transition-colors">Our Tours</a>
+                        </li>
                         <li><a href="#faq" class="text-slate-400 hover:text-teal-400 transition-colors">FAQ</a></li>
                     </ul>
                 </div>
 
+                <!-- 
+                  Recommended Tours Footer links:
+                  Anchor targets carry class '.footer-tour-link' and 'data-tour' attribute parameters.
+                  Clicks bubble up to the global footer listener to auto-prefill the contact booking form.
+                -->
                 <div>
                     <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider">Recommended Tours</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors" data-tour="Architectural Heritage Tour">Architectural Heritage</a></li>
-                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors" data-tour="Gardens & Nature Walk">Gardens & Nature Walk</a></li>
-                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors" data-tour="Cultural & Markets Tour">Cultural & Markets</a></li>
-                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors" data-tour="Complete City Experience">Complete Full-Day Tour</a></li>
-                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors" data-tour="Custom Tour">Custom Private Tours</a></li>
+                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors"
+                                data-tour="Architectural Heritage Tour">Architectural Heritage</a></li>
+                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors"
+                                data-tour="Gardens & Nature Walk">Gardens & Nature Walk</a></li>
+                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors"
+                                data-tour="Cultural & Markets Tour">Cultural & Markets</a></li>
+                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors"
+                                data-tour="Complete City Experience">Complete Full-Day Tour</a></li>
+                        <li><a class="footer-tour-link cursor-pointer text-slate-400 hover:text-teal-400 transition-colors"
+                                data-tour="Custom Tour">Custom Private Tours</a></li>
                     </ul>
                 </div>
 
@@ -967,30 +1170,43 @@
                     <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider">Follow Official Portals</h4>
                     <div class="flex gap-3 mb-6">
                         <!-- Facebook -->
-                        <a href="https://facebook.com" target="_blank" class="bg-[#1877F2]/10 p-2.5 rounded-xl hover:bg-[#1877F2]/20 text-[#1877F2] hover:scale-105 transition-all duration-300" aria-label="Facebook">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        <a href="https://facebook.com" target="_blank"
+                            class="bg-[#1877F2]/10 p-2.5 rounded-xl hover:bg-[#1877F2]/20 text-[#1877F2] hover:scale-105 transition-all duration-300"
+                            aria-label="Facebook">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                             </svg>
                         </a>
                         <!-- Instagram -->
-                        <a href="https://instagram.com" target="_blank" class="bg-[#E4405F]/10 p-2.5 rounded-xl hover:bg-[#E4405F]/20 text-[#E4405F] hover:scale-105 transition-all duration-300" aria-label="Instagram">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        <a href="https://instagram.com" target="_blank"
+                            class="bg-[#E4405F]/10 p-2.5 rounded-xl hover:bg-[#E4405F]/20 text-[#E4405F] hover:scale-105 transition-all duration-300"
+                            aria-label="Instagram">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                             </svg>
                         </a>
                         <!-- X (formerly Twitter) -->
-                        <a href="https://x.com" target="_blank" class="bg-white/10 p-2.5 rounded-xl hover:bg-white/20 text-white hover:scale-105 transition-all duration-300" aria-label="X (formerly Twitter)">
+                        <a href="https://x.com" target="_blank"
+                            class="bg-white/10 p-2.5 rounded-xl hover:bg-white/20 text-white hover:scale-105 transition-all duration-300"
+                            aria-label="X (formerly Twitter)">
                             <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
                         </a>
                         <!-- YouTube -->
-                        <a href="https://youtube.com" target="_blank" class="bg-[#FF0000]/10 p-2.5 rounded-xl hover:bg-[#FF0000]/20 text-[#FF0000] hover:scale-105 transition-all duration-300" aria-label="YouTube">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"/>
-                                <path d="m10 15 5-3-5-3z"/>
+                        <a href="https://youtube.com" target="_blank"
+                            class="bg-[#FF0000]/10 p-2.5 rounded-xl hover:bg-[#FF0000]/20 text-[#FF0000] hover:scale-105 transition-all duration-300"
+                            aria-label="YouTube">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z" />
+                                <path d="m10 15 5-3-5-3z" />
                             </svg>
                         </a>
                     </div>
@@ -998,37 +1214,54 @@
                         <h4 class="font-semibold mb-2 text-xs uppercase tracking-wider text-slate-400">Newsletter</h4>
                         <p class="text-xs text-slate-500 mb-3">Get travel updates and festival announcements</p>
                         <form id="newsletter-form" class="flex gap-2">
-                            <input type="email" placeholder="Email address" required class="bg-slate-800 text-white placeholder:text-slate-500 text-xs px-3 py-2 rounded-lg border border-slate-700 focus:outline-none focus:ring-1 focus:ring-teal-500 w-full">
-                            <button type="submit" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs px-3.5 py-2 rounded-lg transition-colors">Join</button>
+                            <input type="email" placeholder="Email address" required
+                                class="bg-slate-800 text-white placeholder:text-slate-500 text-xs px-3 py-2 rounded-lg border border-slate-700 focus:outline-none focus:ring-1 focus:ring-teal-500 w-full">
+                            <button type="submit"
+                                class="bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs px-3.5 py-2 rounded-lg transition-colors">Join</button>
                         </form>
                     </div>
                 </div>
 
             </div>
 
+            <!-- 
+              Copyright and Auto-Updated Year:
+              The script.js updates #year innerText to the current local year.
+            -->
             <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500 max-w-6xl mx-auto">
-                <p>&copy; <span id="year">2026</span> Chandigarh Tourism Guide. Prepared with official recommendations. All rights reserved.</p>
+                <p>&copy; <span id="year">2026</span> Chandigarh Tourism Guide. Prepared with official recommendations.
+                    All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Attraction Detail Modal (Premium Glassmorphic Modal) -->
-    <div id="attraction-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md hidden animate-fade-in">
-        <div class="relative w-full max-w-2xl bg-white/90 backdrop-blur-lg border border-slate-200/50 rounded-3xl overflow-hidden shadow-2xl animate-slide-up flex flex-col max-h-[90vh]">
-            
+    <!-- 
+      Attraction Detail Modal (Premium Glassmorphic Modal overlay):
+      Kept hidden by default (using .hidden utility class). Dynamically shown,
+      populated, and animated (using fadeIn / slideUp animations) by script.js 
+      whenever an attraction card is clicked.
+    -->
+    <div id="attraction-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md hidden animate-fade-in">
+        <div
+            class="relative w-full max-w-2xl bg-white/90 backdrop-blur-lg border border-slate-200/50 rounded-3xl overflow-hidden shadow-2xl animate-slide-up flex flex-col max-h-[90vh]">
+
             <!-- Modal Header / Image Banner -->
             <div class="relative h-48 sm:h-60 md:h-72 w-full shrink-0">
                 <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
-                
+
                 <!-- Close Button -->
-                <button id="modal-close-btn" class="absolute top-4 right-4 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white hover:scale-105 p-2.5 rounded-full transition-all duration-200" aria-label="Close modal">
+                <button id="modal-close-btn"
+                    class="absolute top-4 right-4 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white hover:scale-105 p-2.5 rounded-full transition-all duration-200"
+                    aria-label="Close modal">
                     <i data-lucide="x" class="h-5 w-5"></i>
                 </button>
 
                 <!-- Title & Tag inside banner -->
                 <div class="absolute bottom-5 left-6 right-6 text-white">
-                    <span id="modal-tag" class="text-[10px] font-bold bg-teal-500/80 backdrop-blur-sm border border-white/20 text-white px-2.5 py-0.5 rounded-full uppercase tracking-wider">Attraction</span>
+                    <span id="modal-tag"
+                        class="text-[10px] font-bold bg-teal-500/80 backdrop-blur-sm border border-white/20 text-white px-2.5 py-0.5 rounded-full uppercase tracking-wider">Attraction</span>
                     <h3 id="modal-title" class="text-2xl md:text-3xl font-serif font-bold mt-2">Attraction Name</h3>
                 </div>
             </div>
@@ -1050,7 +1283,8 @@
                             <i data-lucide="clock" class="h-4 w-4"></i>
                             <span class="text-[10px] font-bold uppercase tracking-wider">Timings</span>
                         </div>
-                        <p id="modal-timings" class="text-slate-700 text-xs md:text-sm font-semibold">9:00 AM - 5:00 PM</p>
+                        <p id="modal-timings" class="text-slate-700 text-xs md:text-sm font-semibold">9:00 AM - 5:00 PM
+                        </p>
                     </div>
 
                     <div class="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl">
@@ -1063,7 +1297,8 @@
                 </div>
 
                 <!-- How to Reach -->
-                <div class="p-4.5 bg-gradient-to-br from-teal-500/5 to-indigo-500/5 border border-teal-500/10 rounded-2xl">
+                <div
+                    class="p-4.5 bg-gradient-to-br from-teal-500/5 to-indigo-500/5 border border-teal-500/10 rounded-2xl">
                     <div class="flex items-center gap-2 text-indigo-600 mb-1.5">
                         <i data-lucide="map-pin" class="h-4.5 w-4.5"></i>
                         <span class="text-[10px] font-bold uppercase tracking-wider">Location / How to Reach</span>
@@ -1075,15 +1310,24 @@
             </div>
 
             <!-- Modal Footer -->
-            <div class="p-4 bg-slate-50 border-t border-slate-200/50 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0 shrink-0">
+            <div
+                class="p-4 bg-slate-50 border-t border-slate-200/50 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0 shrink-0">
                 <span class="text-[10px] text-slate-500 font-semibold">Official Chandigarh Tourism Info</span>
                 <div class="flex gap-2">
-                    <button id="modal-footer-close-btn" class="px-4 py-2 border border-slate-200 hover:border-slate-350 text-slate-600 hover:text-slate-700 rounded-xl text-xs font-semibold transition-colors">
+                    <button id="modal-footer-close-btn"
+                        class="px-4 py-2 border border-slate-200 hover:border-slate-350 text-slate-600 hover:text-slate-700 rounded-xl text-xs font-semibold transition-colors">
                         Close
                     </button>
-                    <a id="modal-booking-link" href="https://chandigarhtourism.gov.in/#Eticketing" target="_blank" class="bg-gradient-to-r from-teal-600 to-indigo-600 text-white hover:from-teal-700 hover:to-indigo-700 px-4 py-2 rounded-xl text-xs font-semibold shadow-sm transition-all flex items-center gap-1">
+                    <a id="modal-booking-link" href="https://chandigarhtourism.gov.in/#Eticketing" target="_blank"
+                        class="bg-gradient-to-r from-teal-600 to-indigo-600 text-white hover:from-teal-700 hover:to-indigo-700 px-4 py-2 rounded-xl text-xs font-semibold shadow-sm transition-all flex items-center gap-1">
                         Book E-Tickets
                         <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
+                    </a>
+                    <a id="modal-booking-link-ios" href="https://apps.apple.com/app/chandigarh-tourism/id1534967396"
+                        target="_blank"
+                        class="bg-indigo-600 text-white hover:bg-indigo-700 px-4 py-2 rounded-xl text-xs font-semibold shadow-sm transition-all flex items-center gap-1 hidden">
+                        iOS App
+                        <i data-lucide="apple" class="h-3.5 w-3.5"></i>
                     </a>
                 </div>
             </div>

@@ -8,31 +8,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const attractionsData = [
         {
             name: "Rock Garden",
-            img: "https://chandigarhtourism.in/images/places-to-vist/headers/the-rock-garden-of-chandigarh-tourism-entry-fee-timings-holidays-reviews-header.jpg",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt2XX6io0XSaLQj3FH1CYluKTvyC2WDYijWQ&s",
             desc: "A 40-acre sculpture garden featuring thousands of artworks made from industrial and urban waste.",
             details: "Created by Nek Chand Saini in 1957, this magical garden showcases over 5,000 sculptures made from recycled materials including broken bangles, tiles, and ceramic pots. It is a world-renowned example of visionary raw art.",
             time: "⏰ 9:00 AM - 7:00 PM (Summer) | 9:00 AM - 6:00 PM (Winter)",
             fee: "🎫 ₹30 (Adults), ₹15 (Children)",
             location: "Sector 1, Chandigarh (Near Sukhna Lake)",
             tag: "UNESCO Heritage Class",
-            bookingLink: "https://chandigarhtourism.gov.in/#Eticketing",
-            bookingText: "Book E-Tickets"
+            bookingLink: "https://play.google.com/store/apps/details?id=com.chandigarh_tourism",
+            bookingText: "Android App"
         },
         {
             name: "Capitol Complex",
-            img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpm42T3STzaQbaxz-U98Mp9g7iI5wTUCl8Yw&s",
             desc: "UNESCO World Heritage Site showcasing Le Corbusier's modernist architectural masterpieces.",
             details: "Houses the Legislative Assembly, Secretariat, and High Court. It is the administrative heart of the city and represents Le Corbusier's design philosophy on a monumental scale. Guided tours are highly recommended.",
             time: "⏰ Guided tours: 10:00 AM, 12:00 PM, 3:00 PM (Prior permission required)",
             fee: "🎫 Free (Requires registration/tour pass)",
             location: "Sector 1, Chandigarh",
             tag: "UNESCO World Heritage",
-            bookingLink: "https://chandigarhtourism.gov.in/pages/ccbooking",
+            bookingLink: "https://chandigarhtourism.gov.in/capitol-complex/",
             bookingText: "Book Guided Tour"
         },
         {
             name: "Sukhna Lake",
-            img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2DIP9hQodNRcQ9-jrWUYRGV9bta2OI2x-bg&s",
             desc: "A serene man-made reservoir perfect for morning walks, boating, and sunset views.",
             details: "A 3 km² rain-fed lake created in 1958 by damming the Sukhna Choe. It serves as a sanctuary for migratory birds and is the most popular outdoor spot for jogging, boating, and enjoying local street food.",
             time: "⏰ 5:00 AM - 10:00 PM Daily",
@@ -44,19 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Chandigarh Bird Park",
-            img: "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RJ8kSSONlnIIHuMxR0f9eoXDp05nvyTdHA&s",
             desc: "India's largest walk-in aviary at Lake Reserved Forest, hosting exotic species in natural environments.",
             details: "Inaugurated in November 2021, the park has been established by the Forest Department to create an appreciation of nature. It features massive walk-in aviaries, lush green pathways, and hundreds of colorful birds including Macaws, Cockatoos, and Budgerigars.",
             time: "⏰ 10:00 AM - 5:00 PM (Closed Mondays & Tuesdays)",
             fee: "🎫 ₹50 (Adults), ₹30 (Children), ₹100 (Foreigners)",
             location: "Lake Reserved Forest, Near Sukhna Lake, Sector 1",
             tag: "Nature & Wildlife",
-            bookingLink: "https://chandigarhtourism.gov.in/#Eticketing",
-            bookingText: "Book E-Tickets"
+            bookingLink: "https://play.google.com/store/apps/details?id=com.chandigarh_tourism",
+            bookingText: "Android App"
         },
         {
             name: "Rose Garden",
-            img: "https://images.unsplash.com/photo-1496062031456-07b8f162a322?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQepdquCWjQjhXtsvBWCruIaPA-gGH7-MlEsw&s",
             desc: "Asia's largest rose garden with over 1,600 varieties spread across 30 acres.",
             details: "Named after India's former President Dr. Zakir Hussain. Home to 1,600 different species of roses and 32,500 varieties of trees. The annual Rose Festival is hosted here in February-March, drawing thousands of tourists.",
             time: "⏰ 6:00 AM - 10:00 PM Daily",
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Sector 17 Plaza",
-            img: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRze_oR49_03KWcsPtXuMF5EPgIBVZ959Ntlg&s",
             desc: "The city's commercial heart featuring open pedestrian spaces, shopping, and dining.",
             details: "India's largest pedestrian shopping plaza, designed as the downtown of Chandigarh. Features lush fountains, high-end retail stores, local boutiques, government emporiums, and cultural music events on weekends.",
             time: "⏰ 10:00 AM - 10:00 PM",
@@ -80,19 +80,19 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Open Hand Monument",
-            img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaU32uyxuL3oaF2-AUktI380RVEhK7BIHiLQ&s",
             desc: "Le Corbusier's iconic 26-meter high sculpture symbolizing peace and prosperity.",
             details: "The official emblem of Chandigarh. This rotating sculpture stands 26 meters high and represents Le Corbusier's philosophy: 'the hand to give and the hand to take; peace and reconciliation'. Set against the Shivalik hills.",
             time: "⏰ 9:00 AM - 8:00 PM (Requires entry pass from Secretariat)",
             fee: "🎫 Free entry",
             location: "Capitol Complex, Sector 1, Chandigarh",
             tag: "Monument & Art",
-            bookingLink: "https://chandigarhtourism.gov.in/pages/ccbooking",
+            bookingLink: "https://chandigarhtourism.gov.in/capitol-complex/",
             bookingText: "Get Entry Pass"
         },
         {
             name: "Le Corbusier Centre",
-            img: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh6O9-TDY5oZHzYXdhqdHI1vnt76WuwfyFDQ&s",
             desc: "The historic building where Chandigarh was planned, now a museum of archives and design.",
             details: "Located in the former office of the project team that built the city, this centre displays drawings, plans, furniture designed by Pierre Jeanneret, and historical documents describing the creation of the city.",
             time: "⏰ 10:00 AM - 5:00 PM (Closed Mondays)",
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Government Museum",
-            img: "https://images.unsplash.com/photo-1580537659466-0a9bfa916a54?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWGRf6AN9q4l5mT0YYFLROP0Aykfvzhmh5BQ&s",
             desc: "One of India's finest museums showcasing Gandhara sculptures and Pahari miniatures.",
             details: "Features a priceless collection of Gandharan Buddhist sculptures, Pahari miniature paintings, decorative arts, and contemporary Indian art, housed in an architectural masterpiece designed by Le Corbusier.",
             time: "⏰ 10:00 AM - 4:45 PM (Closed Mondays)",
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Japanese Garden",
-            img: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_J4M86W1dZffxYDq8sx96TOJeFJCWaX7Rjw&s",
             desc: "Authentic Japanese landscape garden with pagodas, Zen structures, and koi ponds.",
             details: "Spread over 13 acres, features a pagoda tower, meditation hut, Zen garden, wooden bridges, waterfall, and Japanese food courts, connected by an illuminated underground tunnel with murals.",
             time: "⏰ 5:00 AM - 11:00 PM Daily",
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "War Memorial",
-            img: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST4wwFRFr7UGkNfWNE4G1ioLOvV1e6-3SB9Q&s",
             desc: "Asia's largest post-independence war memorial set in a beautiful garden.",
             details: "Inaugurated by President Dr. A.P.J. Abdul Kalam in 2006, this memorial features five sandstone pillars inscribed with the names of nearly 8,500 martyrs from Punjab, Haryana, Himachal, and Chandigarh since 1947.",
             time: "⏰ 5:00 AM - 9:00 PM Daily",
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Garden of Silence",
-            img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPeG45UA-ra_Mzrjbd27yW1XAFRd9fXF210Q&s",
             desc: "A meditative and serene landscape garden housing a majestic seated Buddha.",
             details: "Located at the tail end of Sukhna Lake, this tranquil garden features a colossal white Buddha statue in a meditative posture, encircled by concentric rings of stairs and soothing lights. A peaceful place for yoga and silence.",
             time: "⏰ 6:00 AM - 10:00 PM Daily",
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             name: "Pinjore Gardens",
-            img: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkFk8aPRARDYU9vX7ds_L-NcK8zbEOrH1vew&s",
             desc: "17th-century Mughal Garden with terraced lawns and historical fountains.",
             details: "Also known as Yadavindra Gardens, located 20 km from Chandigarh. Built in the 17th century by Fidai Khan, it covers 100 acres with seven descending terraces, grand pavilions, waterfalls, and a Japanese-style mini zoo.",
             time: "⏰ 7:00 AM - 9:30 PM Daily",
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const culinaryData = [
         {
             title: "Punjabi Cuisine",
-            img: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDMD8s0RYag2YJIe7_JCi_k4V20Ggc5e-qpg&s",
             desc: "Authentic North Indian flavors with butter chicken, sarson da saag, dal makhani, and chole bhature.",
             icon: "utensils",
             recommendations: [
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             title: "Street Food",
-            img: "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1200",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyRHlYTjA-ex4Dni4q_RLalotUQrM6wrCTDw&s",
             desc: "Vibrant street food scene with golgappas, tikki, chaat, kulcha, and noodles at Sectors 17, 22, 23, 34.",
             icon: "ice-cream",
             recommendations: [
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const toursData = [
         {
             title: "Architectural Heritage Tour",
-            img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6C72RITNyiIoTwRFBQTLASILCdR-FJJSOmg&s",
             price: "₹2,500",
             rating: "4.9",
             desc: "Explore Le Corbusier's masterpieces including Capitol Complex, High Court, and Open Hand Monument.",
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             title: "Gardens & Nature Walk",
-            img: "https://images.unsplash.com/photo-1496062031456-07b8f162a322?q=80&w=800",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR4lfzDdsj0_F4qQPEp4MbgNYWY5dd3fN_LQ&s",
             price: "₹2,000",
             rating: "4.8",
             desc: "Discover Chandigarh's lush green spaces from Rock Garden to Rose Garden and Sukhna Lake.",
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             title: "Cultural & Markets Tour",
-            img: "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC02M3wy_5MeDK0c2-64M5x8nOu9YE7UBueQ&s",
             price: "₹2,800",
             rating: "4.9",
             desc: "Experience local life, taste authentic cuisine, and shop at vibrant markets.",
@@ -303,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             title: "Complete City Experience",
-            img: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLAJpwW95hPFzF2z-jaC0kPfeZ_ABtqoBH9w&s",
             price: "₹4,500",
             rating: "5.0",
             desc: "A comprehensive full-day tour covering architecture, nature, culture, and cuisine.",
@@ -375,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             question: "How do I book tickets for Bird Park or Capitol Complex tours?",
-            answer: "You can book tickets in advance through the official e-ticketing portal (https://chandigarhtourism.gov.in/#Eticketing). The Capitol Complex tour requires filling out a booking application online to secure an entry pass for the guided schedules."
+            answer: "You can book tickets in advance for the Bird Park, Rock Garden, and Hop-On Bus through the official Chandigarh Tourism mobile app (available on Google Play Store and iOS App Store). The Capitol Complex tour can be reserved via the official Capitol Complex booking page (https://chandigarhtourism.gov.in/capitol-complex/)."
         },
         {
             question: "Are the tours suitable for children and elderly visitors?",
@@ -430,40 +430,40 @@ document.addEventListener("DOMContentLoaded", function () {
             rating: "4.9",
             location: "Sector 10, Chandigarh",
             desc: "The city's only government-run five-star deluxe hotel. Set against beautiful lawns, offering luxury dining, a health club, and premium suites.",
-            img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
+            img: "https://gos3.ibcdn.com/80ec3494641b11e98fac0242ac110003.jpg",
             amenities: ["5-Star Deluxe", "Swimming Pool", "Spa & Gym", "Fine Dining", "Lawn Bar"],
-            link: "http://www.hotelmountview.gov.in/"
+            link: "https://citcochandigarh.com/"
         },
         {
             name: "Hotel Shivalikview",
             rating: "4.7",
             location: "Sector 17, Chandigarh",
             desc: "A premium business-class hotel in the heart of Sector 17 shopping plaza. Offers spacious rooms, multiple dining outlets, and excellent meeting venues.",
-            img: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800",
+            img: "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/09/06/Pictures/_f585192c-b19e-11e8-a206-120fd6da8a0d.jpg",
             amenities: ["City Center", "Multi-cuisine Resto", "Business Center", "Free Wi-Fi", "Bar"],
-            link: "http://www.hotelshivalikview.gov.in/"
+            link: "https://citcochandigarh.com/"
         },
         {
             name: "Hotel Parkview",
             rating: "4.5",
             location: "Sector 24, Chandigarh",
             desc: "A massive, budget-friendly garden resort with comfortable, spacious rooms, multi-cuisine restaurant, and sprawling lawns, perfect for families.",
-            img: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=800",
+            img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/b2/df/a3/an-okay-hotel-you-can.jpg?w=900&h=500&s=1",
             amenities: ["Budget Friendly", "Sprawling Lawns", "Restaurant", "Conference Hall", "Family Suites"],
-            link: "http://www.hotelparkview.gov.in/"
+            link: "https://citcochandigarh.com/"
         },
         {
             name: "UT State Guest House",
             rating: "4.6",
             location: "Sector 6, Chandigarh",
             desc: "Government-operated premium guest house located in the elite Sector 6 neighborhood. Quiet, clean, and highly secure stay experience.",
-            img: "https://images.unsplash.com/photo-1546412414-8035e1776c9a?q=80&w=800",
+            img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/31/03/bf/ut-guest-house.jpg?w=700&h=400&s=1",
             amenities: ["VVIP Location", "Serene Atmosphere", "Lush Lawns", "Affordable", "Secure"],
-            link: "https://chandigarhtourism.gov.in/"
+            link: "http://admser.chd.nic.in/booking/Webpages/booking1.aspx"
         }
     ];
 
-    // ====================    // ==========================================
+    // ==========================================
     // RENDERING LOGIC (Higher-Order Functions: reduce)
     // ==========================================
 
@@ -471,12 +471,22 @@ document.addEventListener("DOMContentLoaded", function () {
      * Renders attraction cards inside the grid.
      * Uses Array.prototype.reduce() to construct the HTML string (Syllabus Lect. 17-18: map/filter/reduce/sort).
      * Card containers use data attributes (data-name) for syllabus-compliant event delegation instead of inline onclicks.
+     * 
+     * Flow:
+     * 1. Locate the container element (#attractions-grid).
+     * 2. Exit early if not found (DOM safety/guard clause).
+     * 3. Reduce over attractionsData:
+     *    - Starts with an empty string ('').
+     *    - Appends card templates with dynamic values (image, title, tag, description).
+     *    - Injects 'data-name' for click delegation.
+     * 4. Assign the resulting long HTML string to grid.innerHTML.
      */
     function renderAttractions() {
         const grid = document.getElementById("attractions-grid");
-        if (!grid) return;
-        
+        if (!grid) return; // Safeguard if page is loaded without this grid
+
         grid.innerHTML = attractionsData.reduce(function (acc, attr) {
+            // Append template literal of each card to cumulative accumulator 'acc'
             return acc + `
             <div class="attraction-card group relative overflow-hidden rounded-3xl aspect-[4/3] cursor-pointer shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-slate-200/10 sm:last:col-span-2 lg:last:col-span-1 lg:last:col-start-2" data-name="${attr.name}">
                 <img src="${attr.img}" alt="${attr.name}"
@@ -503,12 +513,21 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * Renders the culinary section.
      * Inner lists are rendered using nested reduce chains to stay within syllabus-defined functions.
+     * 
+     * Flow:
+     * 1. Check if #culinary-grid exists.
+     * 2. Reduce the culinaryData array to generate culinary cards:
+     *    - For each cuisine type, run a nested reduce on its 'recommendations' array.
+     *    - The inner reduce constructs individual list items (<li>) with recommendations.
+     *    - The outer reduce injects the sub-list HTML into the main card markup.
+     * 3. Insert the entire compiled HTML string into the grid.
      */
     function renderCulinary() {
         const grid = document.getElementById("culinary-grid");
         if (!grid) return;
 
         grid.innerHTML = culinaryData.reduce(function (acc, item) {
+            // Nested reduce builds the internal <li> tags for recommendations
             const recommendationsHtml = item.recommendations.reduce(function (recAcc, rec) {
                 return recAcc + `
                     <li class="flex items-start gap-2">
@@ -542,6 +561,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /**
      * Renders cultural events using reduce.
+     * 
+     * Flow:
+     * 1. Check for #festivals-grid.
+     * 2. Loop over festivalsData using reduce to construct list/grid cards with name, date, description.
      */
     function renderFestivals() {
         const grid = document.getElementById("festivals-grid");
@@ -561,12 +584,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /**
      * Renders shopping/entertainment lists using reduce.
+     * 
+     * Flow:
+     * 1. Check for #entertainment-grid.
+     * 2. Map groups to columns, utilizing inner reduce to structure the array items as list entries.
      */
     function renderEntertainment() {
         const grid = document.getElementById("entertainment-grid");
         if (!grid) return;
 
         grid.innerHTML = entertainmentData.reduce(function (acc, group) {
+            // Nested reduce to compile the sub-list of shopping/arts items
             const itemsHtml = group.items.reduce(function (itemAcc, item) {
                 return itemAcc + `
                     <li class="flex items-start gap-2.5">
@@ -588,6 +616,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * Renders tours grid using reduce.
      * Buttons have class 'tour-book-btn' and data-title attribute for Event Delegation.
+     * 
+     * Flow:
+     * 1. Validate if #tours-grid exists.
+     * 2. Reduce toursData to assemble individual booking cards.
+     *    - Each card displays price, rating, duration, size limits, and key sights.
+     *    - Includes a custom book button carrying a 'data-title' attribute to support click handling on parent container.
      */
     function renderTours() {
         const grid = document.getElementById("tours-grid");
@@ -646,6 +680,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * Renders testimonials using reduce.
      * Uses a standard for-loop (Syllabus Lect. 5-8) to construct star ratings instead of non-syllabus functions.
+     * 
+     * Flow:
+     * 1. Check for #testimonials-grid.
+     * 2. Loop over testimonialsData using reduce:
+     *    - A traditional 'for' loop constructs the stars markup iteratively.
+     *    - Compiles card templates and populates with avatar image, text, user name, and home city.
      */
     function renderTestimonials() {
         const grid = document.getElementById("testimonials-grid");
@@ -653,6 +693,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         grid.innerHTML = testimonialsData.reduce(function (acc, test) {
             let starsHtml = '';
+            // Syllabus standard incrementing loop to dynamically output numeric count of stars
             for (let i = 0; i < test.stars; i = i + 1) {
                 starsHtml = starsHtml + '<i data-lucide="star" class="h-4 w-4 text-amber-500 fill-amber-500"></i>';
             }
@@ -676,6 +717,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /**
      * Renders FAQs list.
+     * Utilizes HTML5 <details> and <summary> to construct custom accordion style behaviors.
      */
     function renderFAQs() {
         const container = document.getElementById("faq-container");
@@ -685,7 +727,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return acc + `
             <div class="border-b border-slate-200">
                 <details class="group">
-                    <summary class="flex w-full items-center justify-between py-4 font-medium text-left cursor-pointer text-slate-800 hover:text-teal-600 transition-colors">
+                    <summary class="flex w-full items-center justify-between py-4 font-medium text-left cursor-pointer text-slate-800 hover:text-teal-650 transition-colors">
                         <span class="text-sm md:text-base font-semibold">${faq.question}</span>
                         <i data-lucide="chevron-down" class="chevron-icon h-4 w-4 text-slate-400 group-hover:text-teal-650"></i>
                     </summary>
@@ -696,14 +738,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /**
-     * Renders Itinerary Timeline.
+     * Renders Itinerary Timeline based on the active tab duration filter ('1day', '2day', '3day').
      */
     function renderTimeline(duration) {
         const timeline = document.getElementById("itinerary-timeline");
         if (!timeline) return;
 
         const data = itinerariesData[duration];
-        if (!data) return;
+        if (!data) return; // Exit if invalid itinerary key
 
         timeline.innerHTML = data.reduce(function (acc, item) {
             return acc + `
@@ -719,17 +761,21 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>`;
         }, '');
 
+        // Redraw icons within dynamically modified timeline containers
         lucide.createIcons();
     }
 
     /**
-     * Renders official CITCO hotels.
+     * Renders official CITCO hotels in a grid layout.
+     * Uses reduce to loop through the hotel list and assemble elements, 
+     * nesting another reduce block to construct the individual tags/amenities of the hotels.
      */
     function renderCitcoHotels() {
         const grid = document.getElementById("citco-stay-grid");
         if (!grid) return;
 
         grid.innerHTML = citcoHotelsData.reduce(function (acc, hotel) {
+            // Nested reducer builds visual badges for hotel details (e.g. 5-Star, swimming pool)
             const amenitiesHtml = hotel.amenities.reduce(function (amAcc, amenity) {
                 return amAcc + `<span class="text-[9px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">${amenity}</span>`;
             }, '');
@@ -766,10 +812,13 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>`;
         }, '');
 
+        // Call Lucide drawer to compile hotel card SVGs
         lucide.createIcons();
     }
 
     // Helper: Map WMO weather codes to Lucide icons and descriptions
+    // Open-Meteo API outputs numerical meteorological codes based on the World Meteorological Organization (WMO) standards.
+    // This helper translates those integers to friendly descriptions and corresponding vector icon keys.
     function getWeatherIconAndDesc(code, isDay) {
         switch (code) {
             case 0:
@@ -822,13 +871,21 @@ document.addEventListener("DOMContentLoaded", function () {
      * Helper: Fetch actual live weather data for Chandigarh using standard Promises.
      * Uses Promise lifecycle methods (.then and .catch) and standard fetch (Syllabus Lect. 35-40).
      * Avoids non-syllabus async/await structures to adhere strictly to the grading guideline.
+     * 
+     * Flow:
+     * 1. Displays a spinning loading animation while the API request is in progress.
+     * 2. Calls fetch() with the Open-Meteo endpoint (preconfigured for Chandigarh coordinates).
+     * 3. First .then(): Checks if response is successful. If not, throws an error to enter .catch().
+     * 4. Second .then(): Extract temperature, wind, humidity, weather code, and isDay flag.
+     * 5. Translates weather code to an icon/text pair, and injects clean layout into DOM.
+     * 6. catch(): Logs error, falls back to displaying seasonal weather info, and draws a default cloud icon.
      */
     function fetchLiveWeather() {
         const weatherDetails = document.getElementById("weather-details");
         const iconWrapper = document.getElementById("weather-icon-wrapper");
         if (!weatherDetails) return;
 
-        // Show loading state
+        // Show loading spinner while loading weather details
         weatherDetails.innerHTML = `
             <div class="flex flex-col items-center justify-center py-3">
                 <div class="h-5 w-5 rounded-full border-2 border-teal-600 border-t-transparent animate-spin mb-2"></div>
@@ -840,10 +897,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fetch(url)
             .then(function (response) {
+                // Check if response status is OK (code 200-299)
                 if (!response.ok) {
                     throw new Error("Weather API error");
                 }
-                return response.json();
+                return response.json(); // Parse body buffer as JSON object
             })
             .then(function (data) {
                 const current = data.current;
@@ -852,16 +910,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 const wind = current.wind_speed_10m;
                 const code = current.weather_code;
                 const isDay = current.is_day;
-                
-                // Map code to icon and text
+
+                // Map WMO code to appropriate Lucide icon and text translation
                 const weatherInfo = getWeatherIconAndDesc(code, isDay);
-                
-                // Update icon in DOM
+
+                // Update icon wrapper in header/widget
                 if (iconWrapper) {
                     iconWrapper.innerHTML = `<i data-lucide="${weatherInfo.icon}" class="h-6 w-6 text-teal-600" id="weather-icon"></i>`;
                 }
-                
-                // Update weather content
+
+                // Render temperature and meteorological attributes into HTML template
                 weatherDetails.innerHTML = `
                     <div class="flex flex-col items-center justify-center mt-1 animate-fade-in">
                         <div class="text-3xl font-extrabold font-serif text-slate-900 flex items-baseline justify-center">
@@ -883,20 +941,20 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 `;
-                
-                // Re-render Lucide icons
+
+                // Re-render Lucide icons dynamically to compile new weather widget icons
                 lucide.createIcons();
             })
             .catch(function (error) {
                 console.error("Failed to fetch live weather:", error);
-                // Fallback content if the API fails
+                // Fallback content if the API fails or is offline
                 weatherDetails.innerHTML = `
                     <p class="text-sm text-slate-555">
                         Winter: 5-20°C, Summer: 25-45°C, Monsoon: July-September. Pack layers for winter evenings.
                     </p>
                     <div class="text-[10px] text-red-500 font-medium mt-2">Currently showing seasonal averages</div>
                 `;
-                // Reset icon to default cloud
+                // Reset icon to default cloud icon
                 if (iconWrapper) {
                     iconWrapper.innerHTML = `<i data-lucide="cloud" class="h-6 w-6 text-teal-600" id="weather-icon"></i>`;
                 }
@@ -904,7 +962,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Call all render functions to build the DOM dynamically
+    // Call all render functions to build the DOM dynamically on page load
     renderAttractions();
     renderCulinary();
     renderFestivals();
@@ -912,9 +970,9 @@ document.addEventListener("DOMContentLoaded", function () {
     renderTours();
     renderTestimonials();
     renderFAQs();
-    renderTimeline("1day"); // Default to 1 Day Itinerary
+    renderTimeline("1day"); // Default to 1 Day Itinerary on initial render
     renderCitcoHotels();
-    fetchLiveWeather();
+    fetchLiveWeather(); // Fire weather API call
 
     // ==========================================
     // INITIALIZE PLUGINS & SCRIPTS
@@ -923,7 +981,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize Lucide Icons (handles both static and dynamically rendered icons)
     lucide.createIcons();
 
-    // Set Current Year in Footer
+    // Set Current Year dynamically in Footer (BOM/Date manipulation)
     const yearEl = document.getElementById('year');
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
@@ -934,24 +992,41 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==========================================
 
     /**
-     * Prefills the booking form and focuses on the input.
+     * Helper: Prefills the booking form with a selected tour and focuses the form input.
      * Uses location-hash for navigation (BOM: location Lect. 31-34) to scroll smoothly.
+     * 
+     * Detailed Flow:
+     * 1. Modifies the window.location.hash property to '#contact'. This utilizes the Browser Object Model (B.O.M.)
+     *    to automatically trigger scroll adjustments and focus the viewport on the contact section.
+     * 2. Selects the input field element by its unique identifier ID 'tour'.
+     * 3. Assigns the selected tour title string value to the value property of the input field.
+     * 4. Invokes the focus() method on the input element, automatically drawing the user's cursor
+     *    focus to start typing.
      */
     function bookTour(tourTitle) {
-        window.location.hash = "contact";
+        window.location.hash = "contact"; // Navigation via browser object model hash
         const tourInput = document.getElementById('tour');
         if (tourInput) {
-            tourInput.value = tourTitle;
-            tourInput.focus();
+            tourInput.value = tourTitle; // Inject tour title
+            tourInput.focus();           // Move cursor focus to it
         }
     }
 
     /**
-     * Switches itineraries between 1-Day, 2-Day, and 3-Day.
+     * Switches active itinerary views between 1-Day, 2-Day, and 3-Day templates.
      * Uses a standard for...of loop (Syllabus Lect. 5-8) to loop through elements.
+     * 
+     * Detailed Flow:
+     * 1. Queries all itinerary tab button nodes using the CSS selector class '.itinerary-tab'.
+     * 2. Iterates over each button node, removing active design styles (white background, shadow effects)
+     *    and restoring low-contrast slate color parameters to reset visual hierarchy.
+     * 3. Pinpoints the specific button element that was clicked (matched using the target duration ID).
+     * 4. Injects highlight styling classes onto the target element to give the user immediate feedback.
+     * 5. Triggers the renderTimeline function, feeding it the new duration category value to rebuild timelines.
      */
     function switchItinerary(duration) {
         const tabs = document.querySelectorAll('.itinerary-tab');
+        // Loop through tab buttons using standard JS loop constructs
         for (const btn of tabs) {
             btn.classList.remove('bg-white', 'text-slate-900', 'shadow-sm');
             btn.classList.add('text-slate-500', 'hover:text-slate-900');
@@ -959,26 +1034,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const activeBtn = document.getElementById(`tab-${duration}`);
         if (activeBtn) {
+            // Apply active button styles
             activeBtn.classList.remove('text-slate-500', 'hover:text-slate-900');
             activeBtn.classList.add('bg-white', 'text-slate-900', 'shadow-sm');
         }
 
-        renderTimeline(duration);
+        renderTimeline(duration); // Re-draw timeline UI
     }
 
     /**
-     * Opens the attraction details modal.
+     * Opens the attraction details modal and populates it with dynamic data.
      * Uses a standard for...of loop (Syllabus Lect. 5-8) to look up the attraction.
+     * 
+     * Flow:
+     * 1. Searches attractionsData array to find matching attraction details.
+     * 2. Resolves HTML elements within the modal template (title, description, image, price, location).
+     * 3. Updates images, badges, headings, and description paragraphs.
+     * 4. Formats Android/iOS ticketing links dynamically (showing custom app badges if the attraction uses the official app).
+     * 5. Removes 'hidden' class to trigger visual entry transition.
+     * 6. Disables body scrolling to prevent background layout shifting.
      */
     function openAttractionModal(name) {
         let attr = null;
+        // Search dataset to locate correct object
         for (const a of attractionsData) {
             if (a.name === name) {
                 attr = a;
                 break;
             }
         }
-        if (!attr) return;
+        if (!attr) return; // Exit if no matching item found
 
         const modal = document.getElementById("attraction-modal");
         const modalImg = document.getElementById("modal-image");
@@ -990,6 +1075,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const modalLoc = document.getElementById("modal-location");
         const modalBookingLink = document.getElementById("modal-booking-link");
 
+        // Set static modal attributes
         if (modalImg) modalImg.src = attr.img;
         if (modalImg) modalImg.alt = attr.name;
         if (modalTitle) modalTitle.textContent = attr.name;
@@ -999,21 +1085,38 @@ document.addEventListener("DOMContentLoaded", function () {
         if (modalFee) modalFee.textContent = attr.fee;
         if (modalLoc) modalLoc.textContent = attr.location;
 
+        // Custom handling for Play Store / App Store booking actions
         if (modalBookingLink) {
+            const modalBookingLinkIos = document.getElementById("modal-booking-link-ios");
             if (attr.bookingLink) {
                 modalBookingLink.href = attr.bookingLink;
-                modalBookingLink.innerHTML = `${attr.bookingText || 'Book E-Tickets'} <i data-lucide="external-link" class="h-3.5 w-3.5"></i>`;
                 modalBookingLink.classList.remove("hidden");
+
+                if (attr.bookingLink.includes("play.google.com")) {
+                    modalBookingLink.innerHTML = `Android App <i data-lucide="play" class="h-3.5 w-3.5"></i>`;
+                    if (modalBookingLinkIos) {
+                        modalBookingLinkIos.href = "https://apps.apple.com/app/chandigarh-tourism/id1534967396";
+                        modalBookingLinkIos.classList.remove("hidden");
+                    }
+                } else {
+                    modalBookingLink.innerHTML = `${attr.bookingText || 'Book E-Tickets'} <i data-lucide="external-link" class="h-3.5 w-3.5"></i>`;
+                    if (modalBookingLinkIos) {
+                        modalBookingLinkIos.classList.add("hidden");
+                    }
+                }
             } else {
                 modalBookingLink.classList.add("hidden");
+                if (modalBookingLinkIos) {
+                    modalBookingLinkIos.classList.add("hidden");
+                }
             }
         }
 
         if (modal) {
             modal.classList.remove("hidden");
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden"; // Freeze scrollbar on background page
         }
-        lucide.createIcons();
+        lucide.createIcons(); // Render custom vectors inside active modal
     }
 
     /**
@@ -1022,8 +1125,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeAttractionModal() {
         const modal = document.getElementById("attraction-modal");
         if (modal) {
-            modal.classList.add("hidden");
-            document.body.style.overflow = "";
+            modal.classList.add("hidden"); // Hide element from user
+            document.body.style.overflow = ""; // Re-enable background page scrolling
         }
     }
 
@@ -1032,13 +1135,20 @@ document.addEventListener("DOMContentLoaded", function () {
        By using event delegation, we listen for bubbled event triggers
        on parent containers instead of attaching listeners to hundreds of elements.
        This optimizes DOM performance and dynamically supports content changes.
+       
+       How it works:
+       Instead of binding individual onclick events on every single dynamic element:
+       1. Set a single click listener on a top-level parent container.
+       2. Use event bubbling. When clicked, the event bubbles up through element nodes.
+       3. Intercept event in parent, navigate up from clicked node (e.target) to find matched class.
        ------------------------------------------------------------- */
 
-    // 1. Event Delegation for Attractions Grid
+    // 1. Event Delegation for Attractions Grid (launches details modal)
     const attractionsGrid = document.getElementById("attractions-grid");
     if (attractionsGrid) {
         attractionsGrid.addEventListener('click', function (e) {
             let target = e.target;
+            // Climb up the DOM tree from the clicked element to find the attraction-card container
             while (target && target !== attractionsGrid) {
                 if (target.classList && target.classList.contains('attraction-card')) {
                     const name = target.getAttribute('data-name');
@@ -1047,12 +1157,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     break;
                 }
-                target = target.parentNode; // Climb the DOM tree towards parent (Event Bubbling navigation)
+                target = target.parentNode; // Bubbling navigation
             }
         });
     }
 
-    // 2. Event Delegation for Itinerary Tabs
+    // 2. Event Delegation for Itinerary Tabs (swaps active day view)
     const tabContainer = document.getElementById("tab-1day") ? document.getElementById("tab-1day").parentNode : null;
     if (tabContainer) {
         tabContainer.addEventListener('click', function (e) {
@@ -1070,7 +1180,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 3. Event Delegation for Tours Section (Book Tour Button & Custom Tour Button)
+    // 3. Event Delegation for Tours Grid (prefills tour bookings)
     const toursSection = document.getElementById("tours");
     if (toursSection) {
         toursSection.addEventListener('click', function (e) {
@@ -1102,41 +1212,46 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Modal Close Triggers
+    // Modal Close Trigger - Top-Right Close Button
     const modalCloseBtn = document.getElementById('modal-close-btn');
     if (modalCloseBtn) {
         modalCloseBtn.addEventListener('click', closeAttractionModal);
     }
 
+    // Modal Close Trigger - Footer Close Button
     const modalFooterCloseBtn = document.getElementById('modal-footer-close-btn');
     if (modalFooterCloseBtn) {
         modalFooterCloseBtn.addEventListener('click', closeAttractionModal);
     }
 
-    // Backdrop Click to Close Modal
+    // Modal Close Trigger - Clicking on Backdrop Area
     const attractionModal = document.getElementById("attraction-modal");
     if (attractionModal) {
         attractionModal.addEventListener("click", function (e) {
+            // Only trigger close if user clicked directly on the overlay backdrop
             if (e.target === attractionModal) {
                 closeAttractionModal();
             }
         });
     }
 
-    // Escape Key to Close Modal
+    // Modal Close Trigger - Escape Key (Accessibility best practice)
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
             closeAttractionModal();
         }
     });
 
-    // Mobile Menu Handlers
+    // Mobile Navigation Drawer Handlers
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const iconMenu = document.getElementById('icon-menu');
     const iconClose = document.getElementById('icon-close');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
+    /**
+     * Toggles the visibility of the mobile menu panel and toggles icon styles.
+     */
     function toggleMenu() {
         if (!mobileMenu || !iconMenu || !iconClose) return;
         const isHidden = mobileMenu.classList.contains('hidden');
@@ -1144,12 +1259,12 @@ document.addEventListener("DOMContentLoaded", function () {
             mobileMenu.classList.remove('hidden');
             iconMenu.classList.add('hidden');
             iconClose.classList.remove('hidden');
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden"; // Freeze scroll under menu overlay
         } else {
             mobileMenu.classList.add('hidden');
             iconMenu.classList.remove('hidden');
             iconClose.classList.add('hidden');
-            document.body.style.overflow = "";
+            document.body.style.overflow = ""; // Restore background scroll
         }
     }
 
@@ -1157,7 +1272,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menuBtn.addEventListener('click', toggleMenu);
     }
 
-    // Standard for...of loop for adding event listeners to multiple items
+    // Attach click listeners to mobile drawer links to auto-close menu on selection
     for (const link of mobileLinks) {
         link.addEventListener('click', function () {
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
@@ -1170,12 +1285,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevents page reload to handle submit dynamically
+            event.preventDefault(); // Prevents browser reload, letting us process dynamically
 
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
 
+            // Explicit form field validation before submission
             if (nameInput && nameInput.value.trim() === '') {
                 alert('Please enter your name.');
                 nameInput.focus();
@@ -1192,25 +1308,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            // Success feedback
             alert('Thank you! We will get back to you shortly.');
-            contactForm.reset();
+            contactForm.reset(); // Reset form entries
         });
     }
 
+    // Newsletter Form Submission Handler
     const newsletterForm = document.getElementById('newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function (event) {
-            event.preventDefault();
+            event.preventDefault(); // Keep page state
             alert('Subscribed to newsletter.');
             newsletterForm.reset();
         });
     }
 
     // Scroll Logic (Header transparency, Navbar hide, Progress Bar)
-    let lastScrollY = window.scrollY;
+    let lastScrollY = window.scrollY; // Keeps track of scroll position across frames to detect scroll direction
     const progressBar = document.getElementById('progress-bar');
-    let ticking = false;
+    let ticking = false; // Flag to throttle scroll event triggers to prevent page lag and improve performance
 
+    /**
+     * Computes scroll adjustments for header style overrides, 
+     * hides header on scroll-down, shows header on scroll-up, 
+     * and updates the horizontal reading progress indicator indicator.
+     */
     function updateScrollState() {
         const headerEl = document.getElementById('main-header');
         if (!headerEl) return;
@@ -1218,7 +1341,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
 
-        // A. Header Transparency State
+        // A. Header Transparency State (adds shadow and background solid opacity when scrolled)
         if (currentScrollY > 20) {
             headerEl.classList.add('bg-white/95', 'shadow-lg');
             headerEl.classList.remove('bg-white/85');
@@ -1227,14 +1350,14 @@ document.addEventListener("DOMContentLoaded", function () {
             headerEl.classList.add('bg-white/85');
         }
 
-        // B. Navbar Hide/Show Logic
+        // B. Navbar Hide/Show Logic (hides navbar on scroll-down, restores it instantly on scroll-up)
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            headerEl.classList.add('nav-hidden');
+            headerEl.classList.add('nav-hidden'); // Shift navbar upward out of screen bounds
         } else if (currentScrollY < lastScrollY) {
-            headerEl.classList.remove('nav-hidden');
+            headerEl.classList.remove('nav-hidden'); // Restore navbar positions
         }
 
-        // C. Progress Bar Logic
+        // C. Progress Bar Logic (percentage of scroll completed)
         const scrollableHeight = documentHeight - windowHeight;
         const rawProgress = scrollableHeight > 0 ? currentScrollY / scrollableHeight : 0;
         const progress = Math.min(Math.max(rawProgress, 0), 1);
@@ -1243,44 +1366,84 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         lastScrollY = currentScrollY;
-        ticking = false;
+        ticking = false; // Reset lock to allow next frame rendering
     }
 
     // ==========================================
     // SCROLL REVEAL ANIMATIONS (Intersection Observer)
     // ==========================================
+    // Query all elements that participate in the staggered entrance scroll animations
     const revealElements = document.querySelectorAll('.scroll-reveal');
-    
+
+    // Progressive Enhancement: Check if browser supports modern Intersection Observer API
     if ('IntersectionObserver' in window) {
+        // Instantiate observer to track viewport intersection entries
         const revealObserver = new IntersectionObserver(function (entries, observer) {
             for (var i = 0; i < entries.length; i = i + 1) {
                 var entry = entries[i];
+                // Check if target is visible inside viewport boundary
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    // Stop observing once revealed to optimize performance
+                    entry.target.classList.add('revealed'); // Triggers CSS transitions
+                    // Stop observing once revealed to optimize browser runtime cycles
                     observer.unobserve(entry.target);
                 }
             }
         }, {
-            threshold: 0, // Trigger immediately when the element's edge enters the boundary
-            rootMargin: '0px 0px 50px 0px' // Trigger 50px before entering viewport for lag-free visual flow
+            threshold: 0, // Trigger immediately when the element's edge enters viewport
+            rootMargin: '0px 0px 50px 0px' // Trigger slightly before entering viewport for lag-free visuals
         });
 
+        // Register each scroll-reveal element under the observer
         for (var j = 0; j < revealElements.length; j = j + 1) {
             revealObserver.observe(revealElements[j]);
         }
     } else {
-        // Fallback for older browsers
+        // Fallback for older browsers: display all elements immediately
         for (var k = 0; k < revealElements.length; k = k + 1) {
             revealElements[k].classList.add('revealed');
         }
     }
 
+    // Passive scroll event listener to improve scroll performance
     window.addEventListener('scroll', function () {
         if (!ticking) {
-            window.requestAnimationFrame(updateScrollState);
+            window.requestAnimationFrame(updateScrollState); // Align logic with screen refresh rate
             ticking = true;
         }
     }, { passive: true });
+
+    // Smooth scrolling for navigation links with fixed header offset adjustments
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    for (const link of navLinks) {
+        link.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+
+                // Close mobile menu if link was clicked in mobile view
+                const mobileMenuEl = document.getElementById('mobile-menu');
+                const iconMenuEl = document.getElementById('icon-menu');
+                const iconCloseEl = document.getElementById('icon-close');
+                if (mobileMenuEl && !mobileMenuEl.classList.contains('hidden')) {
+                    mobileMenuEl.classList.add('hidden');
+                    if (iconMenuEl) iconMenuEl.classList.remove('hidden');
+                    if (iconCloseEl) iconCloseEl.classList.add('hidden');
+                    document.body.style.overflow = "";
+                }
+
+                // Custom scrolling offset to prevent fixed navbar from blocking main section title
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    }
 
 });
