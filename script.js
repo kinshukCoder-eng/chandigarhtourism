@@ -1,10 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    
-    
-    
-
-    
+    function safeCreateIcons() {
+        if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+            try {
+                lucide.createIcons();
+            } catch (err) {
+                console.error('Failed to create Lucide icons:', err);
+            }
+        }
+    }
     const attractionsData = [
         {
             name: "Rock Garden",
@@ -164,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    
+
     const culinaryData = [
         {
             title: "Punjabi Cuisine",
@@ -204,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    
+
     const festivalsData = [
         {
             title: "Annual Rose Festival",
@@ -238,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    
+
     const entertainmentData = [
         {
             title: "Shopping Hotspots",
@@ -269,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    
+
     const toursData = [
         {
             title: "Architectural Heritage Tour",
@@ -313,7 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    
+
     const testimonialsData = [
         {
             name: "Priya Sharma",
@@ -359,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    
+
     const faqData = [
         {
             question: "What is the best time to visit Chandigarh?",
@@ -395,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    
+
     const itinerariesData = {
         "1day": [
             { time: "09:00 AM", title: "Rock Garden (Sector 1)", desc: "Begin your day by exploring Nek Chand's world-famous 40-acre sculpture garden created entirely out of industrial and domestic waste." },
@@ -423,7 +427,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     };
 
-    
+
     const citcoHotelsData = [
         {
             name: "Hotel Mountview",
@@ -463,17 +467,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    
-    
-    
 
-    
+
+
+
+
     function renderAttractions() {
         const grid = document.getElementById("attractions-grid");
-        if (!grid) return; 
+        if (!grid) return;
 
         grid.innerHTML = attractionsData.reduce(function (acc, attr) {
-            
+
             return acc + `
             <div class="attraction-card group relative overflow-hidden rounded-3xl aspect-[4/3] cursor-pointer shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-slate-200/10 sm:last:col-span-2 lg:last:col-span-1 lg:last:col-start-2" data-name="${attr.name}">
                 <img src="${attr.img}" alt="${attr.name}"
@@ -497,13 +501,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    
+
     function renderCulinary() {
         const grid = document.getElementById("culinary-grid");
         if (!grid) return;
 
         grid.innerHTML = culinaryData.reduce(function (acc, item) {
-            
+
             const recommendationsHtml = item.recommendations.reduce(function (recAcc, rec) {
                 return recAcc + `
                     <li class="flex items-start gap-2">
@@ -535,7 +539,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    
+
     function renderFestivals() {
         const grid = document.getElementById("festivals-grid");
         if (!grid) return;
@@ -552,13 +556,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    
+
     function renderEntertainment() {
         const grid = document.getElementById("entertainment-grid");
         if (!grid) return;
 
         grid.innerHTML = entertainmentData.reduce(function (acc, group) {
-            
+
             const itemsHtml = group.items.reduce(function (itemAcc, item) {
                 return itemAcc + `
                     <li class="flex items-start gap-2.5">
@@ -577,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    
+
     function renderTours() {
         const grid = document.getElementById("tours-grid");
         if (!grid) return;
@@ -632,14 +636,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    
+
     function renderTestimonials() {
         const grid = document.getElementById("testimonials-grid");
         if (!grid) return;
 
         grid.innerHTML = testimonialsData.reduce(function (acc, test) {
             let starsHtml = '';
-            
+
             for (let i = 0; i < test.stars; i = i + 1) {
                 starsHtml = starsHtml + '<i data-lucide="star" class="h-4 w-4 text-amber-500 fill-amber-500"></i>';
             }
@@ -661,7 +665,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    
+
     function renderFAQs() {
         const container = document.getElementById("faq-container");
         if (!container) return;
@@ -680,13 +684,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    
+
     function renderTimeline(duration) {
         const timeline = document.getElementById("itinerary-timeline");
         if (!timeline) return;
 
         const data = itinerariesData[duration];
-        if (!data) return; 
+        if (!data) return;
 
         timeline.innerHTML = data.reduce(function (acc, item) {
             return acc + `
@@ -702,17 +706,17 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>`;
         }, '');
 
-        
+
         lucide.createIcons();
     }
 
-    
+
     function renderCitcoHotels() {
         const grid = document.getElementById("citco-stay-grid");
         if (!grid) return;
 
         grid.innerHTML = citcoHotelsData.reduce(function (acc, hotel) {
-            
+
             const amenitiesHtml = hotel.amenities.reduce(function (amAcc, amenity) {
                 return amAcc + `<span class="text-[9px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">${amenity}</span>`;
             }, '');
@@ -749,13 +753,13 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>`;
         }, '');
 
-        
+
         lucide.createIcons();
     }
 
-    
-    
-    
+
+
+
     function getWeatherIconAndDesc(code, isDay) {
         switch (code) {
             case 0:
@@ -804,13 +808,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    
+
     function fetchLiveWeather() {
         const weatherDetails = document.getElementById("weather-details");
         const iconWrapper = document.getElementById("weather-icon-wrapper");
         if (!weatherDetails) return;
 
-        
+
         weatherDetails.innerHTML = `
             <div class="flex flex-col items-center justify-center py-3">
                 <div class="h-5 w-5 rounded-full border-2 border-teal-600 border-t-transparent animate-spin mb-2"></div>
@@ -822,11 +826,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fetch(url)
             .then(function (response) {
-                
+
                 if (!response.ok) {
                     throw new Error("Weather API error");
                 }
-                return response.json(); 
+                return response.json();
             })
             .then(function (data) {
                 const current = data.current;
@@ -836,15 +840,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 const code = current.weather_code;
                 const isDay = current.is_day;
 
-                
+
                 const weatherInfo = getWeatherIconAndDesc(code, isDay);
 
-                
+
                 if (iconWrapper) {
                     iconWrapper.innerHTML = `<i data-lucide="${weatherInfo.icon}" class="h-6 w-6 text-teal-600" id="weather-icon"></i>`;
                 }
 
-                
+
                 weatherDetails.innerHTML = `
                     <div class="flex flex-col items-center justify-center mt-1 animate-fade-in">
                         <div class="text-3xl font-extrabold font-serif text-slate-900 flex items-baseline justify-center">
@@ -867,19 +871,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 `;
 
-                
+
                 lucide.createIcons();
             })
             .catch(function (error) {
                 console.error("Failed to fetch live weather:", error);
-                
+
                 weatherDetails.innerHTML = `
                     <p class="text-sm text-slate-555">
                         Winter: 5-20°C, Summer: 25-45°C, Monsoon: July-September. Pack layers for winter evenings.
                     </p>
                     <div class="text-[10px] text-red-500 font-medium mt-2">Currently showing seasonal averages</div>
                 `;
-                
+
                 if (iconWrapper) {
                     iconWrapper.innerHTML = `<i data-lucide="cloud" class="h-6 w-6 text-teal-600" id="weather-icon"></i>`;
                 }
@@ -887,7 +891,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    
+
     renderAttractions();
     renderCulinary();
     renderFestivals();
@@ -895,41 +899,41 @@ document.addEventListener("DOMContentLoaded", function () {
     renderTours();
     renderTestimonials();
     renderFAQs();
-    renderTimeline("1day"); 
+    renderTimeline("1day");
     renderCitcoHotels();
-    fetchLiveWeather(); 
+    fetchLiveWeather();
 
-    
-    
-    
 
-    
+
+
+
+
     lucide.createIcons();
 
-    
+
     const yearEl = document.getElementById('year');
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
     }
 
-    
-    
-    
 
-    
+
+
+
+
     function bookTour(tourTitle) {
-        window.location.hash = "contact"; 
+        window.location.hash = "contact";
         const tourInput = document.getElementById('tour');
         if (tourInput) {
-            tourInput.value = tourTitle; 
-            tourInput.focus();           
+            tourInput.value = tourTitle;
+            tourInput.focus();
         }
     }
 
-    
+
     function switchItinerary(duration) {
         const tabs = document.querySelectorAll('.itinerary-tab');
-        
+
         for (const btn of tabs) {
             btn.classList.remove('bg-white', 'text-slate-900', 'shadow-sm');
             btn.classList.add('text-slate-500', 'hover:text-slate-900');
@@ -937,25 +941,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const activeBtn = document.getElementById(`tab-${duration}`);
         if (activeBtn) {
-            
+
             activeBtn.classList.remove('text-slate-500', 'hover:text-slate-900');
             activeBtn.classList.add('bg-white', 'text-slate-900', 'shadow-sm');
         }
 
-        renderTimeline(duration); 
+        renderTimeline(duration);
     }
 
-    
+
     function openAttractionModal(name) {
         let attr = null;
-        
+
         for (const a of attractionsData) {
             if (a.name === name) {
                 attr = a;
                 break;
             }
         }
-        if (!attr) return; 
+        if (!attr) return;
 
         const modal = document.getElementById("attraction-modal");
         const modalImg = document.getElementById("modal-image");
@@ -967,7 +971,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const modalLoc = document.getElementById("modal-location");
         const modalBookingLink = document.getElementById("modal-booking-link");
 
-        
+
         if (modalImg) modalImg.src = attr.img;
         if (modalImg) modalImg.alt = attr.name;
         if (modalTitle) modalTitle.textContent = attr.name;
@@ -977,7 +981,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (modalFee) modalFee.textContent = attr.fee;
         if (modalLoc) modalLoc.textContent = attr.location;
 
-        
+
         if (modalBookingLink) {
             const modalBookingLinkIos = document.getElementById("modal-booking-link-ios");
             if (attr.bookingLink) {
@@ -1006,28 +1010,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (modal) {
             modal.classList.remove("hidden");
-            document.body.style.overflow = "hidden"; 
+            document.body.style.overflow = "hidden";
         }
-        lucide.createIcons(); 
+        lucide.createIcons();
     }
 
-    
+
     function closeAttractionModal() {
         const modal = document.getElementById("attraction-modal");
         if (modal) {
-            modal.classList.add("hidden"); 
-            document.body.style.overflow = ""; 
+            modal.classList.add("hidden");
+            document.body.style.overflow = "";
         }
     }
 
-    
 
-    
+
+
     const attractionsGrid = document.getElementById("attractions-grid");
     if (attractionsGrid) {
         attractionsGrid.addEventListener('click', function (e) {
             let target = e.target;
-            
+
             while (target && target !== attractionsGrid) {
                 if (target.classList && target.classList.contains('attraction-card')) {
                     const name = target.getAttribute('data-name');
@@ -1036,12 +1040,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     break;
                 }
-                target = target.parentNode; 
+                target = target.parentNode;
             }
         });
     }
 
-    
+
     const tabContainer = document.getElementById("tab-1day") ? document.getElementById("tab-1day").parentNode : null;
     if (tabContainer) {
         tabContainer.addEventListener('click', function (e) {
@@ -1059,7 +1063,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    
+
     const toursSection = document.getElementById("tours");
     if (toursSection) {
         toursSection.addEventListener('click', function (e) {
@@ -1077,7 +1081,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    
+
     const footer = document.querySelector('footer');
     if (footer) {
         footer.addEventListener('click', function (e) {
@@ -1091,44 +1095,44 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    
+
     const modalCloseBtn = document.getElementById('modal-close-btn');
     if (modalCloseBtn) {
         modalCloseBtn.addEventListener('click', closeAttractionModal);
     }
 
-    
+
     const modalFooterCloseBtn = document.getElementById('modal-footer-close-btn');
     if (modalFooterCloseBtn) {
         modalFooterCloseBtn.addEventListener('click', closeAttractionModal);
     }
 
-    
+
     const attractionModal = document.getElementById("attraction-modal");
     if (attractionModal) {
         attractionModal.addEventListener("click", function (e) {
-            
+
             if (e.target === attractionModal) {
                 closeAttractionModal();
             }
         });
     }
 
-    
+
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
             closeAttractionModal();
         }
     });
 
-    
+
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const iconMenu = document.getElementById('icon-menu');
     const iconClose = document.getElementById('icon-close');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    
+
     function toggleMenu() {
         if (!mobileMenu || !iconMenu || !iconClose) return;
         const isHidden = mobileMenu.classList.contains('hidden');
@@ -1136,12 +1140,12 @@ document.addEventListener("DOMContentLoaded", function () {
             mobileMenu.classList.remove('hidden');
             iconMenu.classList.add('hidden');
             iconClose.classList.remove('hidden');
-            document.body.style.overflow = "hidden"; 
+            document.body.style.overflow = "hidden";
         } else {
             mobileMenu.classList.add('hidden');
             iconMenu.classList.remove('hidden');
             iconClose.classList.add('hidden');
-            document.body.style.overflow = ""; 
+            document.body.style.overflow = "";
         }
     }
 
@@ -1149,7 +1153,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menuBtn.addEventListener('click', toggleMenu);
     }
 
-    
+
     for (const link of mobileLinks) {
         link.addEventListener('click', function () {
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
@@ -1158,17 +1162,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    
+
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
-            event.preventDefault(); 
+            event.preventDefault();
 
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
 
-            
+
             if (nameInput && nameInput.value.trim() === '') {
                 alert('Please enter your name.');
                 nameInput.focus();
@@ -1185,28 +1189,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            
+
             alert('Thank you! We will get back to you shortly.');
-            contactForm.reset(); 
+            contactForm.reset();
         });
     }
 
-    
+
     const newsletterForm = document.getElementById('newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function (event) {
-            event.preventDefault(); 
+            event.preventDefault();
             alert('Subscribed to newsletter.');
             newsletterForm.reset();
         });
     }
 
-    
-    let lastScrollY = window.scrollY; 
-    const progressBar = document.getElementById('progress-bar');
-    let ticking = false; 
 
-    
+    let lastScrollY = window.scrollY;
+    const progressBar = document.getElementById('progress-bar');
+    let ticking = false;
+
+
     function updateScrollState() {
         const headerEl = document.getElementById('main-header');
         if (!headerEl) return;
@@ -1214,7 +1218,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
 
-        
+
         if (currentScrollY > 20) {
             headerEl.classList.add('bg-white/95', 'shadow-lg');
             headerEl.classList.remove('bg-white/85');
@@ -1223,14 +1227,14 @@ document.addEventListener("DOMContentLoaded", function () {
             headerEl.classList.add('bg-white/85');
         }
 
-        
+
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            headerEl.classList.add('nav-hidden'); 
+            headerEl.classList.add('nav-hidden');
         } else if (currentScrollY < lastScrollY) {
-            headerEl.classList.remove('nav-hidden'); 
+            headerEl.classList.remove('nav-hidden');
         }
 
-        
+
         const scrollableHeight = documentHeight - windowHeight;
         const rawProgress = scrollableHeight > 0 ? currentScrollY / scrollableHeight : 0;
         const progress = Math.min(Math.max(rawProgress, 0), 1);
@@ -1239,53 +1243,53 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         lastScrollY = currentScrollY;
-        ticking = false; 
+        ticking = false;
     }
 
-    
-    
-    
-    
+
+
+
+
     const revealElements = document.querySelectorAll('.scroll-reveal');
 
-    
+
     if ('IntersectionObserver' in window) {
-        
+
         const revealObserver = new IntersectionObserver(function (entries, observer) {
             for (var i = 0; i < entries.length; i = i + 1) {
                 var entry = entries[i];
-                
+
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed'); 
-                    
+                    entry.target.classList.add('revealed');
+
                     observer.unobserve(entry.target);
                 }
             }
         }, {
-            threshold: 0, 
-            rootMargin: '0px 0px 50px 0px' 
+            threshold: 0,
+            rootMargin: '0px 0px 50px 0px'
         });
 
-        
+
         for (var j = 0; j < revealElements.length; j = j + 1) {
             revealObserver.observe(revealElements[j]);
         }
     } else {
-        
+
         for (var k = 0; k < revealElements.length; k = k + 1) {
             revealElements[k].classList.add('revealed');
         }
     }
 
-    
+
     window.addEventListener('scroll', function () {
         if (!ticking) {
-            window.requestAnimationFrame(updateScrollState); 
+            window.requestAnimationFrame(updateScrollState);
             ticking = true;
         }
     }, { passive: true });
 
-    
+
     const navLinks = document.querySelectorAll('a[href^="#"]');
     for (const link of navLinks) {
         link.addEventListener('click', function (e) {
@@ -1295,7 +1299,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (targetElement) {
                 e.preventDefault();
 
-                
+
                 const mobileMenuEl = document.getElementById('mobile-menu');
                 const iconMenuEl = document.getElementById('icon-menu');
                 const iconCloseEl = document.getElementById('icon-close');
@@ -1306,7 +1310,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.body.style.overflow = "";
                 }
 
-                
+
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
