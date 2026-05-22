@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ==========================================
-    // DATASETS (Chandigarh Tourism Specific)
-    // ==========================================
+    
+    
+    
 
-    // 1. Attractions Data (13 items, featuring official recommendations)
+    
     const attractionsData = [
         {
             name: "Rock Garden",
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // 2. Culinary Delights Data
+    
     const culinaryData = [
         {
             title: "Punjabi Cuisine",
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // 3. Cultural Events & Festivals Data
+    
     const festivalsData = [
         {
             title: "Annual Rose Festival",
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // 4. Shopping, Arts & Entertainment Data
+    
     const entertainmentData = [
         {
             title: "Shopping Hotspots",
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // 5. Tours Data
+    
     const toursData = [
         {
             title: "Architectural Heritage Tour",
@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // 6. Testimonials Data
+    
     const testimonialsData = [
         {
             name: "Priya Sharma",
@@ -359,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // 7. FAQ Data
+    
     const faqData = [
         {
             question: "What is the best time to visit Chandigarh?",
@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // 8. Suggested Itineraries Data
+    
     const itinerariesData = {
         "1day": [
             { time: "09:00 AM", title: "Rock Garden (Sector 1)", desc: "Begin your day by exploring Nek Chand's world-famous 40-acre sculpture garden created entirely out of industrial and domestic waste." },
@@ -423,7 +423,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     };
 
-    // 9. CITCO Hotels Data
+    
     const citcoHotelsData = [
         {
             name: "Hotel Mountview",
@@ -463,30 +463,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
-    // ==========================================
-    // RENDERING LOGIC (Higher-Order Functions: reduce)
-    // ==========================================
+    
+    
+    
 
-    /**
-     * Renders attraction cards inside the grid.
-     * Uses Array.prototype.reduce() to construct the HTML string (Syllabus Lect. 17-18: map/filter/reduce/sort).
-     * Card containers use data attributes (data-name) for syllabus-compliant event delegation instead of inline onclicks.
-     * 
-     * Flow:
-     * 1. Locate the container element (#attractions-grid).
-     * 2. Exit early if not found (DOM safety/guard clause).
-     * 3. Reduce over attractionsData:
-     *    - Starts with an empty string ('').
-     *    - Appends card templates with dynamic values (image, title, tag, description).
-     *    - Injects 'data-name' for click delegation.
-     * 4. Assign the resulting long HTML string to grid.innerHTML.
-     */
+    
     function renderAttractions() {
         const grid = document.getElementById("attractions-grid");
-        if (!grid) return; // Safeguard if page is loaded without this grid
+        if (!grid) return; 
 
         grid.innerHTML = attractionsData.reduce(function (acc, attr) {
-            // Append template literal of each card to cumulative accumulator 'acc'
+            
             return acc + `
             <div class="attraction-card group relative overflow-hidden rounded-3xl aspect-[4/3] cursor-pointer shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-slate-200/10 sm:last:col-span-2 lg:last:col-span-1 lg:last:col-start-2" data-name="${attr.name}">
                 <img src="${attr.img}" alt="${attr.name}"
@@ -510,24 +497,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    /**
-     * Renders the culinary section.
-     * Inner lists are rendered using nested reduce chains to stay within syllabus-defined functions.
-     * 
-     * Flow:
-     * 1. Check if #culinary-grid exists.
-     * 2. Reduce the culinaryData array to generate culinary cards:
-     *    - For each cuisine type, run a nested reduce on its 'recommendations' array.
-     *    - The inner reduce constructs individual list items (<li>) with recommendations.
-     *    - The outer reduce injects the sub-list HTML into the main card markup.
-     * 3. Insert the entire compiled HTML string into the grid.
-     */
+    
     function renderCulinary() {
         const grid = document.getElementById("culinary-grid");
         if (!grid) return;
 
         grid.innerHTML = culinaryData.reduce(function (acc, item) {
-            // Nested reduce builds the internal <li> tags for recommendations
+            
             const recommendationsHtml = item.recommendations.reduce(function (recAcc, rec) {
                 return recAcc + `
                     <li class="flex items-start gap-2">
@@ -559,13 +535,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    /**
-     * Renders cultural events using reduce.
-     * 
-     * Flow:
-     * 1. Check for #festivals-grid.
-     * 2. Loop over festivalsData using reduce to construct list/grid cards with name, date, description.
-     */
+    
     function renderFestivals() {
         const grid = document.getElementById("festivals-grid");
         if (!grid) return;
@@ -582,19 +552,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    /**
-     * Renders shopping/entertainment lists using reduce.
-     * 
-     * Flow:
-     * 1. Check for #entertainment-grid.
-     * 2. Map groups to columns, utilizing inner reduce to structure the array items as list entries.
-     */
+    
     function renderEntertainment() {
         const grid = document.getElementById("entertainment-grid");
         if (!grid) return;
 
         grid.innerHTML = entertainmentData.reduce(function (acc, group) {
-            // Nested reduce to compile the sub-list of shopping/arts items
+            
             const itemsHtml = group.items.reduce(function (itemAcc, item) {
                 return itemAcc + `
                     <li class="flex items-start gap-2.5">
@@ -613,16 +577,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    /**
-     * Renders tours grid using reduce.
-     * Buttons have class 'tour-book-btn' and data-title attribute for Event Delegation.
-     * 
-     * Flow:
-     * 1. Validate if #tours-grid exists.
-     * 2. Reduce toursData to assemble individual booking cards.
-     *    - Each card displays price, rating, duration, size limits, and key sights.
-     *    - Includes a custom book button carrying a 'data-title' attribute to support click handling on parent container.
-     */
+    
     function renderTours() {
         const grid = document.getElementById("tours-grid");
         if (!grid) return;
@@ -677,23 +632,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    /**
-     * Renders testimonials using reduce.
-     * Uses a standard for-loop (Syllabus Lect. 5-8) to construct star ratings instead of non-syllabus functions.
-     * 
-     * Flow:
-     * 1. Check for #testimonials-grid.
-     * 2. Loop over testimonialsData using reduce:
-     *    - A traditional 'for' loop constructs the stars markup iteratively.
-     *    - Compiles card templates and populates with avatar image, text, user name, and home city.
-     */
+    
     function renderTestimonials() {
         const grid = document.getElementById("testimonials-grid");
         if (!grid) return;
 
         grid.innerHTML = testimonialsData.reduce(function (acc, test) {
             let starsHtml = '';
-            // Syllabus standard incrementing loop to dynamically output numeric count of stars
+            
             for (let i = 0; i < test.stars; i = i + 1) {
                 starsHtml = starsHtml + '<i data-lucide="star" class="h-4 w-4 text-amber-500 fill-amber-500"></i>';
             }
@@ -715,10 +661,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    /**
-     * Renders FAQs list.
-     * Utilizes HTML5 <details> and <summary> to construct custom accordion style behaviors.
-     */
+    
     function renderFAQs() {
         const container = document.getElementById("faq-container");
         if (!container) return;
@@ -737,15 +680,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }, '');
     }
 
-    /**
-     * Renders Itinerary Timeline based on the active tab duration filter ('1day', '2day', '3day').
-     */
+    
     function renderTimeline(duration) {
         const timeline = document.getElementById("itinerary-timeline");
         if (!timeline) return;
 
         const data = itinerariesData[duration];
-        if (!data) return; // Exit if invalid itinerary key
+        if (!data) return; 
 
         timeline.innerHTML = data.reduce(function (acc, item) {
             return acc + `
@@ -761,21 +702,17 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>`;
         }, '');
 
-        // Redraw icons within dynamically modified timeline containers
+        
         lucide.createIcons();
     }
 
-    /**
-     * Renders official CITCO hotels in a grid layout.
-     * Uses reduce to loop through the hotel list and assemble elements, 
-     * nesting another reduce block to construct the individual tags/amenities of the hotels.
-     */
+    
     function renderCitcoHotels() {
         const grid = document.getElementById("citco-stay-grid");
         if (!grid) return;
 
         grid.innerHTML = citcoHotelsData.reduce(function (acc, hotel) {
-            // Nested reducer builds visual badges for hotel details (e.g. 5-Star, swimming pool)
+            
             const amenitiesHtml = hotel.amenities.reduce(function (amAcc, amenity) {
                 return amAcc + `<span class="text-[9px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded">${amenity}</span>`;
             }, '');
@@ -812,13 +749,13 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>`;
         }, '');
 
-        // Call Lucide drawer to compile hotel card SVGs
+        
         lucide.createIcons();
     }
 
-    // Helper: Map WMO weather codes to Lucide icons and descriptions
-    // Open-Meteo API outputs numerical meteorological codes based on the World Meteorological Organization (WMO) standards.
-    // This helper translates those integers to friendly descriptions and corresponding vector icon keys.
+    
+    
+    
     function getWeatherIconAndDesc(code, isDay) {
         switch (code) {
             case 0:
@@ -867,25 +804,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    /**
-     * Helper: Fetch actual live weather data for Chandigarh using standard Promises.
-     * Uses Promise lifecycle methods (.then and .catch) and standard fetch (Syllabus Lect. 35-40).
-     * Avoids non-syllabus async/await structures to adhere strictly to the grading guideline.
-     * 
-     * Flow:
-     * 1. Displays a spinning loading animation while the API request is in progress.
-     * 2. Calls fetch() with the Open-Meteo endpoint (preconfigured for Chandigarh coordinates).
-     * 3. First .then(): Checks if response is successful. If not, throws an error to enter .catch().
-     * 4. Second .then(): Extract temperature, wind, humidity, weather code, and isDay flag.
-     * 5. Translates weather code to an icon/text pair, and injects clean layout into DOM.
-     * 6. catch(): Logs error, falls back to displaying seasonal weather info, and draws a default cloud icon.
-     */
+    
     function fetchLiveWeather() {
         const weatherDetails = document.getElementById("weather-details");
         const iconWrapper = document.getElementById("weather-icon-wrapper");
         if (!weatherDetails) return;
 
-        // Show loading spinner while loading weather details
+        
         weatherDetails.innerHTML = `
             <div class="flex flex-col items-center justify-center py-3">
                 <div class="h-5 w-5 rounded-full border-2 border-teal-600 border-t-transparent animate-spin mb-2"></div>
@@ -897,11 +822,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fetch(url)
             .then(function (response) {
-                // Check if response status is OK (code 200-299)
+                
                 if (!response.ok) {
                     throw new Error("Weather API error");
                 }
-                return response.json(); // Parse body buffer as JSON object
+                return response.json(); 
             })
             .then(function (data) {
                 const current = data.current;
@@ -911,15 +836,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 const code = current.weather_code;
                 const isDay = current.is_day;
 
-                // Map WMO code to appropriate Lucide icon and text translation
+                
                 const weatherInfo = getWeatherIconAndDesc(code, isDay);
 
-                // Update icon wrapper in header/widget
+                
                 if (iconWrapper) {
                     iconWrapper.innerHTML = `<i data-lucide="${weatherInfo.icon}" class="h-6 w-6 text-teal-600" id="weather-icon"></i>`;
                 }
 
-                // Render temperature and meteorological attributes into HTML template
+                
                 weatherDetails.innerHTML = `
                     <div class="flex flex-col items-center justify-center mt-1 animate-fade-in">
                         <div class="text-3xl font-extrabold font-serif text-slate-900 flex items-baseline justify-center">
@@ -942,19 +867,19 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 `;
 
-                // Re-render Lucide icons dynamically to compile new weather widget icons
+                
                 lucide.createIcons();
             })
             .catch(function (error) {
                 console.error("Failed to fetch live weather:", error);
-                // Fallback content if the API fails or is offline
+                
                 weatherDetails.innerHTML = `
                     <p class="text-sm text-slate-555">
                         Winter: 5-20°C, Summer: 25-45°C, Monsoon: July-September. Pack layers for winter evenings.
                     </p>
                     <div class="text-[10px] text-red-500 font-medium mt-2">Currently showing seasonal averages</div>
                 `;
-                // Reset icon to default cloud icon
+                
                 if (iconWrapper) {
                     iconWrapper.innerHTML = `<i data-lucide="cloud" class="h-6 w-6 text-teal-600" id="weather-icon"></i>`;
                 }
@@ -962,7 +887,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Call all render functions to build the DOM dynamically on page load
+    
     renderAttractions();
     renderCulinary();
     renderFestivals();
@@ -970,63 +895,41 @@ document.addEventListener("DOMContentLoaded", function () {
     renderTours();
     renderTestimonials();
     renderFAQs();
-    renderTimeline("1day"); // Default to 1 Day Itinerary on initial render
+    renderTimeline("1day"); 
     renderCitcoHotels();
-    fetchLiveWeather(); // Fire weather API call
+    fetchLiveWeather(); 
 
-    // ==========================================
-    // INITIALIZE PLUGINS & SCRIPTS
-    // ==========================================
+    
+    
+    
 
-    // Initialize Lucide Icons (handles both static and dynamically rendered icons)
+    
     lucide.createIcons();
 
-    // Set Current Year dynamically in Footer (BOM/Date manipulation)
+    
     const yearEl = document.getElementById('year');
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
     }
 
-    // ==========================================
-    // SEAMLESS EVENT DELEGATION & LISTENERS
-    // ==========================================
+    
+    
+    
 
-    /**
-     * Helper: Prefills the booking form with a selected tour and focuses the form input.
-     * Uses location-hash for navigation (BOM: location Lect. 31-34) to scroll smoothly.
-     * 
-     * Detailed Flow:
-     * 1. Modifies the window.location.hash property to '#contact'. This utilizes the Browser Object Model (B.O.M.)
-     *    to automatically trigger scroll adjustments and focus the viewport on the contact section.
-     * 2. Selects the input field element by its unique identifier ID 'tour'.
-     * 3. Assigns the selected tour title string value to the value property of the input field.
-     * 4. Invokes the focus() method on the input element, automatically drawing the user's cursor
-     *    focus to start typing.
-     */
+    
     function bookTour(tourTitle) {
-        window.location.hash = "contact"; // Navigation via browser object model hash
+        window.location.hash = "contact"; 
         const tourInput = document.getElementById('tour');
         if (tourInput) {
-            tourInput.value = tourTitle; // Inject tour title
-            tourInput.focus();           // Move cursor focus to it
+            tourInput.value = tourTitle; 
+            tourInput.focus();           
         }
     }
 
-    /**
-     * Switches active itinerary views between 1-Day, 2-Day, and 3-Day templates.
-     * Uses a standard for...of loop (Syllabus Lect. 5-8) to loop through elements.
-     * 
-     * Detailed Flow:
-     * 1. Queries all itinerary tab button nodes using the CSS selector class '.itinerary-tab'.
-     * 2. Iterates over each button node, removing active design styles (white background, shadow effects)
-     *    and restoring low-contrast slate color parameters to reset visual hierarchy.
-     * 3. Pinpoints the specific button element that was clicked (matched using the target duration ID).
-     * 4. Injects highlight styling classes onto the target element to give the user immediate feedback.
-     * 5. Triggers the renderTimeline function, feeding it the new duration category value to rebuild timelines.
-     */
+    
     function switchItinerary(duration) {
         const tabs = document.querySelectorAll('.itinerary-tab');
-        // Loop through tab buttons using standard JS loop constructs
+        
         for (const btn of tabs) {
             btn.classList.remove('bg-white', 'text-slate-900', 'shadow-sm');
             btn.classList.add('text-slate-500', 'hover:text-slate-900');
@@ -1034,36 +937,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const activeBtn = document.getElementById(`tab-${duration}`);
         if (activeBtn) {
-            // Apply active button styles
+            
             activeBtn.classList.remove('text-slate-500', 'hover:text-slate-900');
             activeBtn.classList.add('bg-white', 'text-slate-900', 'shadow-sm');
         }
 
-        renderTimeline(duration); // Re-draw timeline UI
+        renderTimeline(duration); 
     }
 
-    /**
-     * Opens the attraction details modal and populates it with dynamic data.
-     * Uses a standard for...of loop (Syllabus Lect. 5-8) to look up the attraction.
-     * 
-     * Flow:
-     * 1. Searches attractionsData array to find matching attraction details.
-     * 2. Resolves HTML elements within the modal template (title, description, image, price, location).
-     * 3. Updates images, badges, headings, and description paragraphs.
-     * 4. Formats Android/iOS ticketing links dynamically (showing custom app badges if the attraction uses the official app).
-     * 5. Removes 'hidden' class to trigger visual entry transition.
-     * 6. Disables body scrolling to prevent background layout shifting.
-     */
+    
     function openAttractionModal(name) {
         let attr = null;
-        // Search dataset to locate correct object
+        
         for (const a of attractionsData) {
             if (a.name === name) {
                 attr = a;
                 break;
             }
         }
-        if (!attr) return; // Exit if no matching item found
+        if (!attr) return; 
 
         const modal = document.getElementById("attraction-modal");
         const modalImg = document.getElementById("modal-image");
@@ -1075,7 +967,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const modalLoc = document.getElementById("modal-location");
         const modalBookingLink = document.getElementById("modal-booking-link");
 
-        // Set static modal attributes
+        
         if (modalImg) modalImg.src = attr.img;
         if (modalImg) modalImg.alt = attr.name;
         if (modalTitle) modalTitle.textContent = attr.name;
@@ -1085,7 +977,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (modalFee) modalFee.textContent = attr.fee;
         if (modalLoc) modalLoc.textContent = attr.location;
 
-        // Custom handling for Play Store / App Store booking actions
+        
         if (modalBookingLink) {
             const modalBookingLinkIos = document.getElementById("modal-booking-link-ios");
             if (attr.bookingLink) {
@@ -1114,41 +1006,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (modal) {
             modal.classList.remove("hidden");
-            document.body.style.overflow = "hidden"; // Freeze scrollbar on background page
+            document.body.style.overflow = "hidden"; 
         }
-        lucide.createIcons(); // Render custom vectors inside active modal
+        lucide.createIcons(); 
     }
 
-    /**
-     * Closes the attraction details modal.
-     */
+    
     function closeAttractionModal() {
         const modal = document.getElementById("attraction-modal");
         if (modal) {
-            modal.classList.add("hidden"); // Hide element from user
-            document.body.style.overflow = ""; // Re-enable background page scrolling
+            modal.classList.add("hidden"); 
+            document.body.style.overflow = ""; 
         }
     }
 
-    /* -------------------------------------------------------------
-       Event Delegation Setup (Highly Valued in Project Rubric 3)
-       By using event delegation, we listen for bubbled event triggers
-       on parent containers instead of attaching listeners to hundreds of elements.
-       This optimizes DOM performance and dynamically supports content changes.
-       
-       How it works:
-       Instead of binding individual onclick events on every single dynamic element:
-       1. Set a single click listener on a top-level parent container.
-       2. Use event bubbling. When clicked, the event bubbles up through element nodes.
-       3. Intercept event in parent, navigate up from clicked node (e.target) to find matched class.
-       ------------------------------------------------------------- */
+    
 
-    // 1. Event Delegation for Attractions Grid (launches details modal)
+    
     const attractionsGrid = document.getElementById("attractions-grid");
     if (attractionsGrid) {
         attractionsGrid.addEventListener('click', function (e) {
             let target = e.target;
-            // Climb up the DOM tree from the clicked element to find the attraction-card container
+            
             while (target && target !== attractionsGrid) {
                 if (target.classList && target.classList.contains('attraction-card')) {
                     const name = target.getAttribute('data-name');
@@ -1157,12 +1036,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     break;
                 }
-                target = target.parentNode; // Bubbling navigation
+                target = target.parentNode; 
             }
         });
     }
 
-    // 2. Event Delegation for Itinerary Tabs (swaps active day view)
+    
     const tabContainer = document.getElementById("tab-1day") ? document.getElementById("tab-1day").parentNode : null;
     if (tabContainer) {
         tabContainer.addEventListener('click', function (e) {
@@ -1180,7 +1059,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 3. Event Delegation for Tours Grid (prefills tour bookings)
+    
     const toursSection = document.getElementById("tours");
     if (toursSection) {
         toursSection.addEventListener('click', function (e) {
@@ -1198,7 +1077,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 4. Event Delegation for Footer Recommended Tour Links
+    
     const footer = document.querySelector('footer');
     if (footer) {
         footer.addEventListener('click', function (e) {
@@ -1212,46 +1091,44 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Modal Close Trigger - Top-Right Close Button
+    
     const modalCloseBtn = document.getElementById('modal-close-btn');
     if (modalCloseBtn) {
         modalCloseBtn.addEventListener('click', closeAttractionModal);
     }
 
-    // Modal Close Trigger - Footer Close Button
+    
     const modalFooterCloseBtn = document.getElementById('modal-footer-close-btn');
     if (modalFooterCloseBtn) {
         modalFooterCloseBtn.addEventListener('click', closeAttractionModal);
     }
 
-    // Modal Close Trigger - Clicking on Backdrop Area
+    
     const attractionModal = document.getElementById("attraction-modal");
     if (attractionModal) {
         attractionModal.addEventListener("click", function (e) {
-            // Only trigger close if user clicked directly on the overlay backdrop
+            
             if (e.target === attractionModal) {
                 closeAttractionModal();
             }
         });
     }
 
-    // Modal Close Trigger - Escape Key (Accessibility best practice)
+    
     document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") {
             closeAttractionModal();
         }
     });
 
-    // Mobile Navigation Drawer Handlers
+    
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const iconMenu = document.getElementById('icon-menu');
     const iconClose = document.getElementById('icon-close');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    /**
-     * Toggles the visibility of the mobile menu panel and toggles icon styles.
-     */
+    
     function toggleMenu() {
         if (!mobileMenu || !iconMenu || !iconClose) return;
         const isHidden = mobileMenu.classList.contains('hidden');
@@ -1259,12 +1136,12 @@ document.addEventListener("DOMContentLoaded", function () {
             mobileMenu.classList.remove('hidden');
             iconMenu.classList.add('hidden');
             iconClose.classList.remove('hidden');
-            document.body.style.overflow = "hidden"; // Freeze scroll under menu overlay
+            document.body.style.overflow = "hidden"; 
         } else {
             mobileMenu.classList.add('hidden');
             iconMenu.classList.remove('hidden');
             iconClose.classList.add('hidden');
-            document.body.style.overflow = ""; // Restore background scroll
+            document.body.style.overflow = ""; 
         }
     }
 
@@ -1272,7 +1149,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menuBtn.addEventListener('click', toggleMenu);
     }
 
-    // Attach click listeners to mobile drawer links to auto-close menu on selection
+    
     for (const link of mobileLinks) {
         link.addEventListener('click', function () {
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
@@ -1281,17 +1158,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Form Submissions Validation and Handlers (Syllabus Lect. 27-30: Form validation)
+    
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevents browser reload, letting us process dynamically
+            event.preventDefault(); 
 
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
 
-            // Explicit form field validation before submission
+            
             if (nameInput && nameInput.value.trim() === '') {
                 alert('Please enter your name.');
                 nameInput.focus();
@@ -1308,32 +1185,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // Success feedback
+            
             alert('Thank you! We will get back to you shortly.');
-            contactForm.reset(); // Reset form entries
+            contactForm.reset(); 
         });
     }
 
-    // Newsletter Form Submission Handler
+    
     const newsletterForm = document.getElementById('newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Keep page state
+            event.preventDefault(); 
             alert('Subscribed to newsletter.');
             newsletterForm.reset();
         });
     }
 
-    // Scroll Logic (Header transparency, Navbar hide, Progress Bar)
-    let lastScrollY = window.scrollY; // Keeps track of scroll position across frames to detect scroll direction
+    
+    let lastScrollY = window.scrollY; 
     const progressBar = document.getElementById('progress-bar');
-    let ticking = false; // Flag to throttle scroll event triggers to prevent page lag and improve performance
+    let ticking = false; 
 
-    /**
-     * Computes scroll adjustments for header style overrides, 
-     * hides header on scroll-down, shows header on scroll-up, 
-     * and updates the horizontal reading progress indicator indicator.
-     */
+    
     function updateScrollState() {
         const headerEl = document.getElementById('main-header');
         if (!headerEl) return;
@@ -1341,7 +1214,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
 
-        // A. Header Transparency State (adds shadow and background solid opacity when scrolled)
+        
         if (currentScrollY > 20) {
             headerEl.classList.add('bg-white/95', 'shadow-lg');
             headerEl.classList.remove('bg-white/85');
@@ -1350,14 +1223,14 @@ document.addEventListener("DOMContentLoaded", function () {
             headerEl.classList.add('bg-white/85');
         }
 
-        // B. Navbar Hide/Show Logic (hides navbar on scroll-down, restores it instantly on scroll-up)
+        
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            headerEl.classList.add('nav-hidden'); // Shift navbar upward out of screen bounds
+            headerEl.classList.add('nav-hidden'); 
         } else if (currentScrollY < lastScrollY) {
-            headerEl.classList.remove('nav-hidden'); // Restore navbar positions
+            headerEl.classList.remove('nav-hidden'); 
         }
 
-        // C. Progress Bar Logic (percentage of scroll completed)
+        
         const scrollableHeight = documentHeight - windowHeight;
         const rawProgress = scrollableHeight > 0 ? currentScrollY / scrollableHeight : 0;
         const progress = Math.min(Math.max(rawProgress, 0), 1);
@@ -1366,53 +1239,53 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         lastScrollY = currentScrollY;
-        ticking = false; // Reset lock to allow next frame rendering
+        ticking = false; 
     }
 
-    // ==========================================
-    // SCROLL REVEAL ANIMATIONS (Intersection Observer)
-    // ==========================================
-    // Query all elements that participate in the staggered entrance scroll animations
+    
+    
+    
+    
     const revealElements = document.querySelectorAll('.scroll-reveal');
 
-    // Progressive Enhancement: Check if browser supports modern Intersection Observer API
+    
     if ('IntersectionObserver' in window) {
-        // Instantiate observer to track viewport intersection entries
+        
         const revealObserver = new IntersectionObserver(function (entries, observer) {
             for (var i = 0; i < entries.length; i = i + 1) {
                 var entry = entries[i];
-                // Check if target is visible inside viewport boundary
+                
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed'); // Triggers CSS transitions
-                    // Stop observing once revealed to optimize browser runtime cycles
+                    entry.target.classList.add('revealed'); 
+                    
                     observer.unobserve(entry.target);
                 }
             }
         }, {
-            threshold: 0, // Trigger immediately when the element's edge enters viewport
-            rootMargin: '0px 0px 50px 0px' // Trigger slightly before entering viewport for lag-free visuals
+            threshold: 0, 
+            rootMargin: '0px 0px 50px 0px' 
         });
 
-        // Register each scroll-reveal element under the observer
+        
         for (var j = 0; j < revealElements.length; j = j + 1) {
             revealObserver.observe(revealElements[j]);
         }
     } else {
-        // Fallback for older browsers: display all elements immediately
+        
         for (var k = 0; k < revealElements.length; k = k + 1) {
             revealElements[k].classList.add('revealed');
         }
     }
 
-    // Passive scroll event listener to improve scroll performance
+    
     window.addEventListener('scroll', function () {
         if (!ticking) {
-            window.requestAnimationFrame(updateScrollState); // Align logic with screen refresh rate
+            window.requestAnimationFrame(updateScrollState); 
             ticking = true;
         }
     }, { passive: true });
 
-    // Smooth scrolling for navigation links with fixed header offset adjustments
+    
     const navLinks = document.querySelectorAll('a[href^="#"]');
     for (const link of navLinks) {
         link.addEventListener('click', function (e) {
@@ -1422,7 +1295,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (targetElement) {
                 e.preventDefault();
 
-                // Close mobile menu if link was clicked in mobile view
+                
                 const mobileMenuEl = document.getElementById('mobile-menu');
                 const iconMenuEl = document.getElementById('icon-menu');
                 const iconCloseEl = document.getElementById('icon-close');
@@ -1433,7 +1306,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.body.style.overflow = "";
                 }
 
-                // Custom scrolling offset to prevent fixed navbar from blocking main section title
+                
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;

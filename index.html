@@ -11,7 +11,7 @@
         content="Chandigarh Tourism, Rock Garden, Capitol Complex, Sukhna Lake, CITCO Hotels, Bird Park, Le Corbusier, Travel Guide">
     <link rel="icon" type="image/x-icon" href="download.jpg">
 
-    <!-- Google Fonts for premium typography -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,11 +20,7 @@
 
     <link rel="stylesheet" href="./style.css">
     
-    <!-- 
-      Tailwind CSS Framework and Theme Customization:
-      Extended theme definitions provide color mappings for Deep Teal (representing Chandigarh's green cover)
-      and Indigo (representing structured modernist planning), alongside custom font pairings.
-    -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -61,20 +57,12 @@
 
 <body class="font-sans antialiased bg-slate-50/50 text-slate-800">
 
-    <!-- 
-      Scroll Progress Bar:
-      Container elements used by script.js's window scroll listener to calculate and update 
-      width dynamically based on page scroll percentages.
-    -->
+    
     <div class="fixed top-0 left-0 w-full h-1.5 bg-slate-200 z-[60]">
         <div id="progress-bar" class="h-full bg-teal-600 w-0 transition-all duration-75 ease-out"></div>
     </div>
 
-    <!-- 
-      Navigation Header (Main Header):
-      Has id="main-header" so script.js can add or remove the '.nav-hidden' utility class
-      to hide the bar on scroll-down and show it when scrolling back up.
-    -->
+    
     <header id="main-header"
         class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/85 backdrop-blur-md border-b border-slate-200/50">
         <nav class="container mx-auto px-4 py-4">
@@ -87,12 +75,7 @@
                     </div>
                 </a>
 
-                <!-- 
-                  Desktop Navigation Menu:
-                  Visually hidden on small devices ('hidden'), visible from medium devices upward ('md:flex').
-                  Anchor links point to unique element IDs for scrolling. Links with '.hover-underline' 
-                  trigger the gradient underline slide animations defined in style.css.
-                -->
+                
                 <div class="hidden md:flex items-center gap-6">
                     <a href="#about"
                         class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">About</a>
@@ -114,10 +97,7 @@
                         class="relative text-sm font-medium text-slate-700 hover:text-teal-650 transition-colors hover-underline">Contact</a>
                 </div>
 
-                <!-- 
-                  Header CTA Booking Button:
-                  Desktop-only CTA element styled with gradient colors matching the design system.
-                -->
+                
                 <div class="hidden md:block">
                     <a href="#contact"
                         class="bg-gradient-to-r from-teal-600 to-indigo-600 text-white hover:from-teal-750 hover:to-indigo-750 px-5 py-2.5 rounded-xl text-sm font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 inline-block">
@@ -135,11 +115,7 @@
         </nav>
     </header>
 
-    <!-- 
-      Mobile Navigation Menu Overlay:
-      Controlled via script.js toggle listeners. Starts hidden (using Tailwind's '.hidden') 
-      and is displayed/hidden by toggling classes when #mobile-menu-btn is clicked.
-    -->
+    
     <div id="mobile-menu"
         class="hidden md:hidden fixed inset-x-0 top-16 bottom-0 bg-white/95 backdrop-blur-md z-40 overflow-y-auto px-6 py-8 border-t border-slate-200 shadow-xl flex flex-col justify-between">
         <div class="flex flex-col gap-4">
@@ -219,10 +195,7 @@
                     </a>
                 </div>
 
-                <!-- 
-                  Hero Stats Row:
-                  A simple 3-column grid demonstrating green cover and visitor ratings.
-                -->
+                
                 <div class="mt-12 pt-8 border-t border-slate-200 grid grid-cols-3 gap-6">
                     <div>
                         <div class="text-3xl font-bold text-teal-600 mb-1">10k+</div>
@@ -245,11 +218,7 @@
     <section id="about" class="py-12 md:py-20 bg-slate-50/50">
         <div class="container mx-auto px-4">
 
-            <!-- 
-              About Section Content Layout:
-              Left side details the structural history of Le Corbusier's project.
-              Right side provides a staggered visual gallery featuring transform hover-lifts.
-            -->
+            
             <div class="grid md:grid-cols-2 gap-12 items-center mb-10">
 
                 <div class="scroll-reveal">
@@ -299,7 +268,7 @@
                     </p>
                 </div>
 
-                <!-- Staggered grid photo gallery -->
+                
                 <div class="grid grid-cols-2 gap-4 scroll-reveal delay-200">
                     <div class="space-y-4">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8tVyqQ1e7HMwIYHbJ91dCviYgcryn2r8y7g&s"
@@ -467,17 +436,12 @@
                 </p>
             </div>
 
-            <!-- 
-              Attractions Grid Container:
-              Populated dynamically by script.js. The JS parses the attractions dataset,
-              renders structural cards with image, titles, tags, and custom data attributes (e.g. data-id),
-              and appends the generated template string here.
-            -->
+            
             <div id="attractions-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal delay-100"></div>
         </div>
     </section>
 
-    <!-- Suggested Itineraries Section -->
+    
     <section id="itineraries" class="py-12 md:py-20 bg-white border-y border-slate-200/50">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-12 scroll-reveal">
@@ -492,7 +456,7 @@
                 </p>
             </div>
 
-            <!-- Itinerary Tabs -->
+            
             <div class="flex justify-center mb-10 scroll-reveal delay-100">
                 <div class="inline-flex p-1 bg-slate-100 rounded-2xl border border-slate-200/30">
                     <button id="tab-1day"
@@ -513,15 +477,11 @@
                 </div>
             </div>
 
-            <!-- 
-              Itinerary Timeline Output Container:
-              This timeline-container is injected with a structured list of timeline-item nodes
-              containing days, highlights, descriptions, and duration points whenever a tab is switched.
-            -->
+            
             <div
                 class="max-w-3xl mx-auto bg-slate-50/50 border border-slate-200/60 rounded-3xl p-6 md:p-10 shadow-sm scroll-reveal delay-200">
                 <div id="itinerary-timeline" class="timeline-container">
-                    <!-- Loaded dynamically via script.js (tab-switch triggers) -->
+                    
                 </div>
             </div>
         </div>
@@ -542,11 +502,7 @@
                 </p>
             </div>
 
-            <!-- 
-              Food, Culture & Entertainment Grids:
-              These three containers receive dynamically rendered card elements 
-              constructed using template loops in script.js.
-            -->
+            
             <div class="mb-10 scroll-reveal delay-100">
                 <h3 class="text-2xl md:text-3xl font-serif font-bold text-center mb-6">Culinary Delights</h3>
                 <div id="culinary-grid" class="grid md:grid-cols-3 gap-8"></div>
@@ -565,7 +521,7 @@
         </div>
     </section>
 
-    <!-- Stay & Accommodations (CITCO Hotels) Section -->
+    
     <section id="stay" class="py-12 md:py-20 bg-slate-50/50 border-t border-slate-200/50">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-12 scroll-reveal">
@@ -580,13 +536,10 @@
                 </p>
             </div>
 
-            <!-- 
-              CITCO Stay Grid:
-              Injected dynamically in script.js using details from the official CITCO hotel stay list.
-            -->
+            
             <div id="citco-stay-grid"
                 class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto scroll-reveal delay-100">
-                <!-- Dynamically loaded via script.js -->
+                
             </div>
         </div>
     </section>
@@ -616,12 +569,7 @@
                             (May-July) when temperatures exceed 40°C.</p>
                     </div>
 
-                    <!-- 
-                      Dynamic Weather Widget Card:
-                      script.js attempts to fetch real-time weather details for Chandigarh from a public API,
-                      updating this card's inner content and changing weather-icon-wrapper background classes.
-                      In case of network failures, it gracefully falls back to monthly average weather details.
-                    -->
+                    
                     <div class="bg-white rounded-2xl border border-slate-200/60 p-6 text-center shadow-sm hover-lift flex flex-col justify-between"
                         id="weather-card">
                         <div>
@@ -750,7 +698,7 @@
 
                 </div>
 
-                <!-- Hop-on Hop-off Double Decker bus featured card -->
+                
                 <div
                     class="max-w-4xl mx-auto bg-gradient-to-r from-teal-500/10 to-indigo-500/10 border-2 border-teal-500/20 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-sm scroll-reveal delay-100">
                     <div class="bg-teal-600 text-white p-4.5 rounded-2xl mx-auto md:mx-0">
@@ -792,7 +740,7 @@
                 </div>
             </div>
 
-            <!-- Official E-Ticketing Helper -->
+            
             <div
                 class="mt-16 bg-slate-50 border border-slate-200/60 rounded-3xl p-6 md:p-10 max-w-5xl mx-auto shadow-sm scroll-reveal">
                 <div class="flex flex-col lg:flex-row items-center gap-8">
@@ -895,7 +843,7 @@
         </div>
     </section>
 
-    <!-- Tours Section -->
+    
     <section id="tours" class="py-12 md:py-20 bg-gradient-to-b from-white to-slate-50/50">
         <div class="container mx-auto px-4">
 
@@ -932,7 +880,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    
     <section id="testimonials" class="py-12 md:py-20 bg-white">
         <div class="container mx-auto px-4">
 
@@ -952,7 +900,7 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    
     <section id="faq" class="py-12 md:py-20 bg-slate-50/50 border-t border-slate-200/50">
         <div class="container mx-auto px-4">
 
@@ -971,7 +919,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    
     <section id="contact" class="py-12 md:py-20 bg-white relative overflow-hidden">
 
         <div class="absolute inset-0 opacity-5 pointer-events-none">
@@ -1046,11 +994,7 @@
                     </div>
                 </div>
 
-                <!-- 
-                  Contact Form:
-                  Monitored via script.js. Form submissions prevent default browser reload behavior,
-                  validate input fields, and show native alerts or success status cards.
-                -->
+                
                 <div
                     class="bg-slate-50 border border-slate-200/60 p-5 sm:p-8 rounded-3xl shadow-sm scroll-reveal delay-200">
                     <form id="contact-form" class="space-y-5">
@@ -1097,7 +1041,7 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+    
     <footer class="bg-slate-900 text-white py-16 border-t border-slate-800">
         <div class="container mx-auto px-4">
 
@@ -1145,11 +1089,7 @@
                     </ul>
                 </div>
 
-                <!-- 
-                  Recommended Tours Footer links:
-                  Anchor targets carry class '.footer-tour-link' and 'data-tour' attribute parameters.
-                  Clicks bubble up to the global footer listener to auto-prefill the contact booking form.
-                -->
+                
                 <div>
                     <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider">Recommended Tours</h4>
                     <ul class="space-y-2 text-sm">
@@ -1169,7 +1109,7 @@
                 <div>
                     <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider">Follow Official Portals</h4>
                     <div class="flex gap-3 mb-6">
-                        <!-- Facebook -->
+                        
                         <a href="https://facebook.com" target="_blank"
                             class="bg-[#1877F2]/10 p-2.5 rounded-xl hover:bg-[#1877F2]/20 text-[#1877F2] hover:scale-105 transition-all duration-300"
                             aria-label="Facebook">
@@ -1178,7 +1118,7 @@
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                             </svg>
                         </a>
-                        <!-- Instagram -->
+                        
                         <a href="https://instagram.com" target="_blank"
                             class="bg-[#E4405F]/10 p-2.5 rounded-xl hover:bg-[#E4405F]/20 text-[#E4405F] hover:scale-105 transition-all duration-300"
                             aria-label="Instagram">
@@ -1189,7 +1129,7 @@
                                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                             </svg>
                         </a>
-                        <!-- X (formerly Twitter) -->
+                        
                         <a href="https://x.com" target="_blank"
                             class="bg-white/10 p-2.5 rounded-xl hover:bg-white/20 text-white hover:scale-105 transition-all duration-300"
                             aria-label="X (formerly Twitter)">
@@ -1198,7 +1138,7 @@
                                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
                         </a>
-                        <!-- YouTube -->
+                        
                         <a href="https://youtube.com" target="_blank"
                             class="bg-[#FF0000]/10 p-2.5 rounded-xl hover:bg-[#FF0000]/20 text-[#FF0000] hover:scale-105 transition-all duration-300"
                             aria-label="YouTube">
@@ -1224,10 +1164,7 @@
 
             </div>
 
-            <!-- 
-              Copyright and Auto-Updated Year:
-              The script.js updates #year innerText to the current local year.
-            -->
+            
             <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500 max-w-6xl mx-auto">
                 <p>&copy; <span id="year">2026</span> Chandigarh Tourism Guide. Prepared with official recommendations.
                     All rights reserved.</p>
@@ -1235,30 +1172,25 @@
         </div>
     </footer>
 
-    <!-- 
-      Attraction Detail Modal (Premium Glassmorphic Modal overlay):
-      Kept hidden by default (using .hidden utility class). Dynamically shown,
-      populated, and animated (using fadeIn / slideUp animations) by script.js 
-      whenever an attraction card is clicked.
-    -->
+    
     <div id="attraction-modal"
         class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md hidden animate-fade-in">
         <div
             class="relative w-full max-w-2xl bg-white/90 backdrop-blur-lg border border-slate-200/50 rounded-3xl overflow-hidden shadow-2xl animate-slide-up flex flex-col max-h-[90vh]">
 
-            <!-- Modal Header / Image Banner -->
+            
             <div class="relative h-48 sm:h-60 md:h-72 w-full shrink-0">
                 <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
 
-                <!-- Close Button -->
+                
                 <button id="modal-close-btn"
                     class="absolute top-4 right-4 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white hover:scale-105 p-2.5 rounded-full transition-all duration-200"
                     aria-label="Close modal">
                     <i data-lucide="x" class="h-5 w-5"></i>
                 </button>
 
-                <!-- Title & Tag inside banner -->
+                
                 <div class="absolute bottom-5 left-6 right-6 text-white">
                     <span id="modal-tag"
                         class="text-[10px] font-bold bg-teal-500/80 backdrop-blur-sm border border-white/20 text-white px-2.5 py-0.5 rounded-full uppercase tracking-wider">Attraction</span>
@@ -1266,9 +1198,9 @@
                 </div>
             </div>
 
-            <!-- Modal Content (Scrollable) -->
+            
             <div class="flex-1 overflow-y-auto p-6 md:p-8 space-y-6">
-                <!-- Description -->
+                
                 <div>
                     <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Overview</h4>
                     <p id="modal-description" class="text-slate-655 text-sm leading-relaxed">
@@ -1276,7 +1208,7 @@
                     </p>
                 </div>
 
-                <!-- Info Grid -->
+                
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="p-4 bg-slate-50 border border-slate-200/50 rounded-2xl">
                         <div class="flex items-center gap-1.5 text-teal-600 mb-1">
@@ -1296,7 +1228,7 @@
                     </div>
                 </div>
 
-                <!-- How to Reach -->
+                
                 <div
                     class="p-4.5 bg-gradient-to-br from-teal-500/5 to-indigo-500/5 border border-teal-500/10 rounded-2xl">
                     <div class="flex items-center gap-2 text-indigo-600 mb-1.5">
@@ -1309,7 +1241,7 @@
                 </div>
             </div>
 
-            <!-- Modal Footer -->
+            
             <div
                 class="p-4 bg-slate-50 border-t border-slate-200/50 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0 shrink-0">
                 <span class="text-[10px] text-slate-500 font-semibold">Official Chandigarh Tourism Info</span>

@@ -1,22 +1,11 @@
-/* ==========================================================================
-   CHANDIGARH TOURISM - PREMIUM STYLESHEET
-   --------------------------------------------------------------------------
-   This stylesheet contains the custom design system tokens, utility classes,
-   transitions, interactive micro-animations, glassmorphic layouts, and scroll 
-   reveal configurations that extend and customize Tailwind CSS.
-   ========================================================================== */
+
 
 :root {
-    /* 
-       Premium Color Palette (Harmonious Deep Teal and Indigo)
-       - Teal: Symbolizes nature, sustainable green cover (35% forest cover).
-       - Indigo: Symbolizes structure, modernism, and Le Corbusier's layout.
-       - Accent (Amber): Used for highlights, active elements, and CTA highlights.
-    */
-    --primary: #0d9488;      /* Teal 600 */
-    --primary-hover: #0f766e;/* Teal 700 */
-    --secondary: #4f46e5;    /* Indigo 600 */
-    --accent: #f59e0b;       /* Amber 500 */
+    
+    --primary: #0d9488;      
+    --primary-hover: #0f766e;
+    --secondary: #4f46e5;    
+    --accent: #f59e0b;       
     --slate-900: #0f172a;
     --slate-800: #1e293b;
     --slate-700: #334155;
@@ -24,17 +13,13 @@
 }
 
 body {
-    /* Ensure the horizontal page bounds are guarded against accidental overflow */
+    
     overflow-x: hidden;
-    /* Native smooth-scrolling experience across internal anchor link targets */
+    
     scroll-behavior: smooth;
 }
 
-/* 
-   Tailwind Override & Extension Classes
-   Provides explicit CSS variables hooks for Tailwind properties where standard 
-   color bindings need unified variables synchronization.
-*/
+
 .text-primary-teal {
     color: var(--primary);
 }
@@ -48,18 +33,12 @@ body {
     border-color: var(--primary);
 }
 
-/* 
-   Typography Enhancement: text-wrap balance
-   Prevents orphans (single words on new lines) in headers, creating elegant headings.
-*/
+
 .text-balance {
     text-wrap: balance;
 }
 
-/* 
-   Navigation Hover Animation: Expanding underline from left to right
-   Uses a pseudo-element transition to animate the underline width on hover.
-*/
+
 .hover-underline::after {
     content: '';
     position: absolute;
@@ -68,7 +47,7 @@ body {
     width: 0;
     height: 2.5px;
     background: linear-gradient(90deg, var(--primary), var(--secondary));
-    /* cubic-bezier transition curves for high-performance ease in and out */
+    
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -76,19 +55,12 @@ body {
     width: 100%;
 }
 
-/* 
-   Smart Navigation Header State
-   Toggled dynamically via script.js. Hides the header when scrolling down,
-   re-reveals it smoothly when scrolling up to save vertical view area.
-*/
+
 .nav-hidden {
     transform: translateY(-100%);
 }
 
-/* 
-   Interactive Animation: Cards Hover Lifts & Soft Shadow Transitions
-   Uses cubic-bezier for a subtle spring/bounce feel rather than a flat linear raise.
-*/
+
 .hover-lift {
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
 }
@@ -107,10 +79,7 @@ body {
     box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.08);
 }
 
-/* 
-   Glassmorphism Effects (Modern Glass/Frosted Layout Styling)
-   Combines semitransparent backgrounds with CSS backdrop-filter blur for high contrast overlay readability.
-*/
+
 .glass-effect {
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(16px);
@@ -124,11 +93,7 @@ body {
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* 
-   Itinerary Timeline Styles
-   Draws vertical connection lines using linear-gradients on pseudo-elements,
-   and handles animated dots that pop slightly during element hover.
-*/
+
 .timeline-container {
     position: relative;
     padding-left: 2rem;
@@ -168,16 +133,13 @@ body {
     border-color: var(--secondary);
 }
 
-/* 
-   Interactive Accordion (FAQ section) - Details & Summary Tags Overrides
-   Hides default browser disclosure indicators and adds smooth chevron rotations on expansion.
-*/
+
 details>summary {
-    list-style: none; /* Hide default list marker on Chrome/Firefox */
+    list-style: none; 
 }
 
 details>summary::-webkit-details-marker {
-    display: none; /* Hide default triangle on Safari */
+    display: none; 
 }
 
 details[open] summary .chevron-icon {
@@ -188,10 +150,7 @@ details[open] summary .chevron-icon {
     transition: transform 0.2s ease-in-out;
 }
 
-/* 
-   Custom Premium Scrollbars
-   Replaces default Windows scrollbars with thin, rounded slate-colored tracks for a cleaner UI.
-*/
+
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -209,10 +168,7 @@ details[open] summary .chevron-icon {
     background: #94a3b8;
 }
 
-/* 
-   Premium Modal Open Animation Keyframes
-   Provides transition effects (fade-in overlays and slide-up modal cards) when detail modals are active.
-*/
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -231,13 +187,7 @@ details[open] summary .chevron-icon {
     animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* ==========================================================================
-   SCROLL REVEAL / INTERSECTION OBSERVER ANIMATIONS
-   --------------------------------------------------------------------------
-   These classes work in tandem with the Intersection Observer in script.js.
-   Elements start transparent and shifted slightly down, transitioning into
-   view once they intersect the viewport.
-   ========================================================================== */
+
 .scroll-reveal {
     opacity: 0;
     transform: translateY(12px);
@@ -250,11 +200,7 @@ details[open] summary .chevron-icon {
     transform: translateY(0);
 }
 
-/* 
-   Staggered Delay Utilities
-   Used to cascade entrance animations for adjacent grid elements,
-   creating a refined 'wave-like' entrance instead of a monolithic jump.
-*/
+
 .delay-100 {
     transition-delay: 50ms;
 }
