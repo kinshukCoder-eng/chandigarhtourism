@@ -1,20 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     function safeCreateIcons() {
-        if (typeof lucide !== 'undefined' && lucide.createIcons) {
+        if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
             try {
                 lucide.createIcons();
             } catch (err) {
-                console.error("Lucide icon creation failed:", err);
+                console.error('Failed to create Lucide icons:', err);
             }
         }
     }
-
-    
-    
-    
-
-    
     const attractionsData = [
         {
             name: "Rock Garden",
@@ -937,18 +931,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 top: offsetPosition,
                 behavior: "smooth"
             });
-            if (history.pushState) {
-                history.pushState(null, null, '#contact');
-            } else {
-                window.location.hash = 'contact';
-            }
-        } else {
-            window.location.hash = "contact";
         }
         const tourInput = document.getElementById('tour');
         if (tourInput) {
             tourInput.value = tourTitle; 
-            tourInput.focus();           
+            tourInput.focus({ preventScroll: true });           
         }
     }
 
@@ -1316,11 +1303,19 @@ document.addEventListener("DOMContentLoaded", function () {
     for (const link of navLinks) {
         link.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            if (targetId === '#') {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+                return;
+            }
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
 
+                
                 const mobileMenuEl = document.getElementById('mobile-menu');
                 const iconMenuEl = document.getElementById('icon-menu');
                 const iconCloseEl = document.getElementById('icon-close');
@@ -1331,6 +1326,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.body.style.overflow = "";
                 }
 
+                
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + (window.scrollY || window.pageYOffset) - headerOffset;
